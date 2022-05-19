@@ -1,25 +1,107 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>01-06</title>
-<style type="text/css" media="all">
-body {width: 42em;}
-</style>
-<link rel="stylesheet" type="text/css" href="sheet1.css" media="all" />
-<style type="text/css">
-@import url(sheet2.css);
-h1 {color: silver;}
-/* These are my styles! Yay! */
-</style>
-</head>
-<body>
-<h1>Waffles!</h1>
-<p style="color: gray;">The most wonderful of all breakfast foods is
-the waffle—a ridged and cratered slab of home-cooked, fluffy goodness
-that makes every child's heart soar with joy. And they're so easy to make!
-Just a simple waffle-maker and some batter, and you're ready for a morning
-of aromatic ecstasy!
-</p>
-</body>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>01-03</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <img src="img/PHP-types.svg" alt="" /> <br />
+
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>String</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Integer</td>
+        <td>$x=200_000</td>
+      </tr>
+      <tr>
+        <td>Float (double)</td>
+        <td>
+          $x=200_000.53 <br />
+          $x=13.5e-3 //0.0135 $x=13.5e3 //13500 <a href="https://floating-point-gui.de/">sdff</a>;
+        </td>
+      </tr>
+      <tr>
+        <td>Boolean</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Array</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Object</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>NULL</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Resource</td>
+        <td>undefined</td>
+      </tr>
+    </table>
+
+    <span class="blue">is_array</span><span class="purple">()</span><br />
+    <span class="blue">is_bool</span><span class="purple">()</span><br />
+    <span class="blue">is_callable</span><span class="purple">()</span><br />
+    <span class="blue">is_double</span><span class="purple">()</span><br />
+    <span class="blue">is_float</span><span class="purple">()</span><br />
+    <span class="blue">is_int</span><span class="purple">()</span><br />
+    <span class="blue">is_integer</span><span class="purple">()</span><br />
+    <span class="blue">is_long</span><span class="purple">()</span><br />
+    <span class="blue">is_null</span><span class="purple">()</span><br />
+    <span class="blue">is_numeric</span><span class="purple">()</span><br />
+    <span class="blue">is_object</span><span class="purple">()</span><br />
+    <span class="blue">is_real</span><span class="purple">()</span><br />
+    <span class="blue">is_resource</span><span class="purple">()</span><br />
+    <span class="blue">is_scalar</span><span class="purple">()</span><br />
+    <span class="blue">is_string</span><span class="purple">()</span><br />
+    <span class="blue">isset</span><span class="purple">()</span><br />
+    <span class="blue">var_dump</span><span class="purple">()</span> - returnes type and result both<br />
+    <span class="blue">gettype</span><span class="purple">()</span>Possible values for the returned string are:<br />
+
+    <table>
+      <tr>
+        <td>"boolean"</td>
+      </tr>
+      <tr>
+        <td>"integer"</td>
+      </tr>
+      <tr>
+        <td>"double" (for historical reasons "double" is returned in case of a float, and not simply "float")</td>
+      </tr>
+      <tr>
+        <td>"string"</td>
+      </tr>
+      <tr>
+        <td>"array"</td>
+      </tr>
+      <tr>
+        <td>"object"</td>
+      </tr>
+      <tr>
+        <td>"resource"</td>
+      </tr>
+      <tr>
+        <td>"resource (closed)" as of PHP 7.2.0</td>
+      </tr>
+      <tr>
+        <td>"NULL"</td>
+      </tr>
+      <tr>
+        <td>"unknown type"</td>
+      </tr>
+    </table>
+    <span class="green">To check if variable exists, use isset()</span><br />
+    <span class="green">All functions are Boolean</span><br />
+  </body>
 </html>

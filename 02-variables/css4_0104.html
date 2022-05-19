@@ -3,188 +3,22 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>01-03</title>
-    <style type="text/css" media="all">
-      table,
-      th,
-      td {
-        border: #ddd solid 1px;
-        border-collapse: collapse;
-        text-align: left;
-      }
-      th {
-        background-color: #4caf50;
-        color: #ffffff;
-        text-align: center;
-        padding: 0 5px;
-      }
-      td {
-        color: #000000;
-      }
-      tr:nth-child(even) {
-        background-color: #f2f2f2;
-      }
-      tr:nth-child(odd) {
-        background-color: #ffffff;
-      }
-      tr:hover {
-        background-color: #dddddd;
-      }
-    </style>
+    <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
-    <table>
-      <tr>
-        <th>Expression</th>
-        <th>gettype()</th>
-        <th>empty()</th>
-        <th>is_null()</th>
-        <th>isset()</th>
-        <th>bool : if($x)</th>
-      </tr>
-      <tr>
-        <td>$x = "";</td>
-        <td>string</td>
-        <td>true</td>
-        <td>false</td>
-        <td>true</td>
-        <td>false</td>
-      </tr>
-      <tr>
-        <td>$x = null;</td>
-        <td>NULL</td>
-        <td>true</td>
-        <td>true</td>
-        <td>false</td>
-        <td>false</td>
-      </tr>
-      <tr>
-        <td>var $x;</td>
-        <td>NULL</td>
-        <td>true</td>
-        <td>true</td>
-        <td>false</td>
-        <td>false</td>
-      </tr>
-      <tr>
-        <td>$x is undefined</td>
-        <td>NULL</td>
-        <td>true</td>
-        <td>true</td>
-        <td>false</td>
-        <td>false</td>
-      </tr>
-      <tr>
-        <td>$x = [];</td>
-        <td>array</td>
-        <td>true</td>
-        <td>false</td>
-        <td>true</td>
-        <td>false</td>
-      </tr>
-      <tr>
-        <td>$x = ['a', 'b'];</td>
-        <td>array</td>
-        <td>false</td>
-        <td>false</td>
-        <td>true</td>
-        <td>true</td>
-      </tr>
-      <tr>
-        <td>$x = false;</td>
-        <td>bool</td>
-        <td>true</td>
-        <td>false</td>
-        <td>true</td>
-        <td>false</td>
-      </tr>
-      <tr>
-        <td>$x = true;</td>
-        <td>bool</td>
-        <td>false</td>
-        <td>false</td>
-        <td>true</td>
-        <td>true</td>
-      </tr>
-      <tr>
-        <td>$x = 1;</td>
-        <td>int</td>
-        <td>false</td>
-        <td>false</td>
-        <td>true</td>
-        <td>true</td>
-      </tr>
-      <tr>
-        <td>$x = 42;</td>
-        <td>int</td>
-        <td>false</td>
-        <td>false</td>
-        <td>true</td>
-        <td>true</td>
-      </tr>
-      <tr>
-        <td>$x = 0;</td>
-        <td>int</td>
-        <td>true</td>
-        <td>false</td>
-        <td>true</td>
-        <td>false</td>
-      </tr>
-      <tr>
-        <td>$x = -1;</td>
-        <td>int</td>
-        <td>false</td>
-        <td>false</td>
-        <td>true</td>
-        <td>true</td>
-      </tr>
-      <tr>
-        <td>$x = "1";</td>
-        <td>string</td>
-        <td>false</td>
-        <td>false</td>
-        <td>true</td>
-        <td>true</td>
-      </tr>
-      <tr>
-        <td>$x = "0";</td>
-        <td>string</td>
-        <td>true</td>
-        <td>false</td>
-        <td>true</td>
-        <td>false</td>
-      </tr>
-      <tr>
-        <td>$x = "-1";</td>
-        <td>string</td>
-        <td>false</td>
-        <td>false</td>
-        <td>true</td>
-        <td>true</td>
-      </tr>
-      <tr>
-        <td>$x = "php";</td>
-        <td>string</td>
-        <td>false</td>
-        <td>false</td>
-        <td>true</td>
-        <td>true</td>
-      </tr>
-      <tr>
-        <td>$x = "true";</td>
-        <td>string</td>
-        <td>false</td>
-        <td>false</td>
-        <td>true</td>
-        <td>true</td>
-      </tr>
-      <tr>
-        <td>$x = "false";</td>
-        <td>string</td>
-        <td>false</td>
-        <td>false</td>
-        <td>true</td>
-        <td>true</td>
-      </tr>
-    </table>
+    Sometimes it is convenient to be able to have variable variable names. That is, a variable name which can be set and used dynamically. A normal variable is set with a statement such as:
+    <br />
+    $Bar = "a"; <br />
+    $Foo = "Bar"; <br />
+    $World = "Foo"; <br />
+    $Hello = "World"; <br />
+    $a = "Hello";
+
+    <br />
+    $a; //Returns Hello <br />
+    $$a; //Returns World <br />
+    $$$a; //Returns Foo <br />
+    $$$$a; //Returns Bar <br />
+    $$$$$a; //Returns a
   </body>
 </html>
