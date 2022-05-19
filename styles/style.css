@@ -1,0 +1,199 @@
+body {
+  font-size: 22px;
+  background-color: #fff8dc;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10px;
+}
+
+.content {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.panel {
+  text-align: center;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.credits {
+  text-align: center;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.disabled {
+  pointer-events: none;
+  filter: grayscale(100%);
+}
+
+div,
+ol,
+ul {
+  animation-name: animatetop;
+  animation-duration: 0.9s;
+}
+
+@keyframes animatetop {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+button[class^="close"] {
+  border: rgb(184, 21, 21) dashed 2px;
+  /* float: right; */
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 24px;
+  background-color: transparent;
+  border: 3px;
+  cursor: pointer;
+}
+
+button[class^="control"] {
+  border: rgb(184, 21, 21) dashed 2px;
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 24px;
+  background-color: transparent;
+  border: 3px;
+  cursor: pointer;
+  color: red;
+}
+
+img {
+  border-radius: 10px;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.sky {
+  font-weight: bold;
+  color: #0080ff;
+}
+
+.comment {
+  font-style: italic;
+  color: #008000;
+}
+
+.blue {
+  font-weight: bold;
+  color: #0000ff;
+}
+
+.green {
+  font-style: italic;
+  color: #008000;
+}
+
+.red {
+  font-style: italic;
+  color: red;
+}
+
+.yellow {
+  font-style: italic;
+  color: yellow;
+}
+
+.purple {
+  color: #8000ff;
+}
+
+.hidden {
+  display: none;
+}
+
+.border {
+  border: red dashed 2px;
+}
+
+.active {
+  color: blue;
+  font-style: italic;
+  /* animation-name: example; */
+  animation-duration: 2s;
+}
+
+h1 {
+  text-align: center;
+}
+
+table,
+th,
+td {
+  border: #ddd solid 1px;
+  border-collapse: collapse;
+  text-align: left;
+}
+th {
+  background-color: #4caf50;
+  color: #ffffff;
+  text-align: center;
+  padding: 0 5px;
+}
+td {
+  color: #000000;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+tr:hover {
+  background-color: #dddddd;
+}
+
+button[class^="control"] {
+  display: inline;
+  width: 36px;
+  height: 36px;
+}
+
+@keyframes example {
+  from {
+    color: rgb(3, 3, 3);
+  }
+
+  to {
+    color: rgb(185, 12, 35);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 10px;
+  }
+
+  .panel {
+    grid-area: 1 / 1 / span 1 / span 1;
+  }
+
+  .credit {
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+
+  .book {
+    grid-area: 3 / 1 / span 1 / span 1;
+  }
+
+  .content {
+    grid-area: 4 / 1 / span 1 / span 1;
+  }
+}

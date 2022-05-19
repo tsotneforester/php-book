@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>01-03</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    Magic constants are the predefined constants in PHP which get changed on the basis of their use. They start with double underscore (__) and ends with double underscore. They are similar to other predefined constants but as they change their values with the context, they are called magic constants. There are nine magic constants in PHP. In which eight magic constants start and end with double underscores (__).
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>__LINE__</td>
+        <td>The current line number of the file.</td>
+      </tr>
+      <tr>
+        <td>__FILE__</td>
+        <td>The full path and filename of the file with symlinks resolved. If used inside an include, the name of the included file is returned.</td>
+      </tr>
+      <tr>
+        <td>__DIR__</td>
+        <td>The directory of the file. If used inside an include, the directory of the included file is returned. This is equivalent to dirname(__FILE__). This directory name does not have a trailing slash unless it is the root directory.</td>
+      </tr>
+      <tr>
+        <td>__FUNCTION__</td>
+        <td>The function name, or {closure} for anonymous functions.</td>
+      </tr>
+      <tr>
+        <td>__CLASS__</td>
+        <td>The class name. The class name includes the namespace it was declared in (e.g. Foo\Bar). When used in a trait method, __CLASS__ is the name of the class the trait is used in.</td>
+      </tr>
+      <tr>
+        <td>__TRAIT__</td>
+        <td>The trait name. The trait name includes the namespace it was declared in (e.g. Foo\Bar).</td>
+      </tr>
+      <tr>
+        <td>__METHOD__</td>
+        <td>The class method name.</td>
+      </tr>
+      <tr>
+        <td>__NAMESPACE__</td>
+        <td>The name of the current namespace.</td>
+      </tr>
+      <tr>
+        <td>ClassName::class</td>
+        <td>The fully qualified class name.</td>
+      </tr>
+    </table>
+  </body>
+</html>

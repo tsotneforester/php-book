@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>01-01</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <span class="blue">phpinfo</span><span class="purple">();</span>
+    <span class="comment"> — Outputs information about PHP's configuration. Because every system is setup differently, phpinfo() is commonly used to check configuration settings and for available predefined variables on a given system.</span>
+    <span class="blue">echo</span><span class="blue"> phpversion</span><span class="purple">(); </span><span class="green">// 8.0.12</span><br />
+    <table>
+      <tr>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>The configuration line, php.ini location, build date, Web Server, System and more.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>PHP Credits. See also phpcredits().</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Current Local and Master values for PHP directives. See also ini_get().</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Loaded modules and their respective settings. See also get_loaded_extensions().</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>Environment Variable information that's also available in $_ENV.</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td>Shows all predefined variables from EGPCS (Environment, GET, POST, Cookie, Server).</td>
+      </tr>
+      <tr>
+        <td>64</td>
+        <td>PHP License information. See also the » license FAQ.</td>
+      </tr>
+      <tr>
+        <td>-1</td>
+        <td>Shows all of the above.</td>
+      </tr>
+    </table>
+  </body>
+</html>
