@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>02-01</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    $array = ["bmw", "toyota", "chevrolet", "opel"]; <br />
+    foreach ($array as $key => $value) { echo $key . ":" . $value . "<br />"; } <br />
+    echo $value;// after foreach loop $value is not destroyed, so you should unset it <br />
+    alternative sintax is instead of curly braces use :...endforeach
+  </body>
+</html>
