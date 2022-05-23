@@ -17,11 +17,11 @@ p {line-height: 1.33;}
 
 @keyframes slide {
 	from {
-		transform: translate(1rem,0);
+		transform: translate(1rem,0)<span class="whitee">;</span>
 		opacity: 0;
 	}
 	to {
-		transform: translate(0);
+		transform: translate(0)<span class="whitee">;</span>
 		opacity: 1;
 	}
 }

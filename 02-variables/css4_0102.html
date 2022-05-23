@@ -7,12 +7,12 @@
   </head>
   <body>
     there is difference between const and define methods, inside if statement const does not work. needs to be cheched <br />
-    <span class="blue">define</span><span class="purple"> (</span><span class="red">"Username"</span><span class="purple"> , </span><span class="red">"Tsotneforester"</span><span class="purple">); </span><span class="green">// (caseSensetive)</span><br />
-    <span class="blue">echo</span><span class="black"> Username</span><span class="purple">; </span><span class="green">// "Tsotneforester"</span><br />
-    <span class="blue">echo </span><span class="blue">constant</span><span class="purple"> (</span><span class="red">"Username"</span><span class="purple">); </span><span class="green">// "Tsotneforester"</span><br />
+    <span class="blue">define</span><span class="purple"> (</span><span class="red">"Username"</span><span class="purple"> , </span><span class="red">"Tsotneforester"</span><span class="purple">)<span class="whitee">;</span> </span><span class="comment">// (caseSensetive)</span><br />
+    <span class="blue">echo</span><span class="black"> Username</span><span class="purple">; </span><span class="comment">// "Tsotneforester"</span><br />
+    <span class="blue">echo </span><span class="blue">constant</span><span class="purple"> (</span><span class="red">"Username"</span><span class="purple">)<span class="whitee">;</span> </span><span class="comment">// "Tsotneforester"</span><br />
     <span class="blue">const</span><span class="black"> Lastname </span><span class="purple">=</span><span class="red"> "Meladze"</span><span class="purple">;</span><br />
-    <span class="blue">echo </span><span class="black"> Lastname</span><span class="purple">; </span><span class="green">// "Meladze"</span><br />
-    <span class="blue">echo</span><span class="blue"> defined</span><span class="purple"> (</span><span class="red">"Username"</span><span class="purple">); </span><span class="green">// 1 - It checkes if constant Exists</span><br />
-    <span class="blue">print_r</span><span class="purple"> (</span><span class="blue">get_defined_constants</span><span class="purple"> (</span><span class="blue">true</span><span class="purple">)[</span><span class="red">"user"</span><span class="purple">]); </span><span class="green">// returnes user defined constants in array</span>
+    <span class="blue">echo </span><span class="black"> Lastname</span><span class="purple">; </span><span class="comment">// "Meladze"</span><br />
+    <span class="blue">echo</span><span class="blue"> defined</span><span class="purple"> (</span><span class="red">"Username"</span><span class="purple">)<span class="whitee">;</span> </span><span class="comment">// 1 - It checkes if constant Exists</span><br />
+    <span class="blue">print_r</span><span class="purple"> (</span><span class="blue">get_defined_constants</span><span class="purple"> (</span><span class="blue">true</span><span class="purple">)[</span><span class="red">"user"</span><span class="purple">])<span class="whitee">;</span> </span><span class="comment">// returnes user defined constants in array</span>
   </body>
 </html>

@@ -6,29 +6,33 @@
     <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
-    <span class="sky">$user</span><span class="purple"> = </span><span class="purple">[</span><br />
-    <span class="red">"name"</span><span class="purple"> =&gt; </span><span class="red">"John"</span><span class="purple"> , </span><br />
-    <span class="red">"login"</span><span class="purple"> =&gt; </span><span class="red">"root"</span><span class="purple"> , </span><br />
-    <span class="red">"password"</span><span class="purple"> =&gt; </span><span class="red">"1234"</span><span class="purple"> , </span><br />
-    <span class="red">"age"</span><span class="purple">=&gt;</span><span class="sc122">25</span><span class="purple"> , </span><br />
-    <span class="red">"hello"</span><br />
-    <span class="purple">];</span><br />
-    <span class="sky">$user</span><span class="purple">[</span><span class="red">"name"</span><span class="purple">]; </span><span class="green">// John</span><br />
-    <span class="sky">$user</span><span class="purple">[</span><span class="sc122">0</span><span class="purple">]; </span><span class="green">// hello</span><br />
-    <span class="green">//"name" is KEY "John" is VALUE;</span><br />
-    <span class="sky">$array</span><span class="purple"> = </span><span class="blue">array</span><span class="purple"> (</span><span class="red">"size"</span><span class="purple"> =&gt; </span><span class="red">"XL"</span><span class="purple"> , </span><span class="red">"color"</span><span class="purple"> =&gt; </span><span class="red">"gold"</span><span class="purple">);</span><br />
-    <span class="blue"> print_r</span><span class="purple"> (</span><span class="blue">array_values</span><span class="purple"> (</span><span class="sky">$array</span><span class="purple">)); </span><span class="green">// Array ( [0] =&gt; XL [1] =&gt; gold )</span><br />
-    <span class="sky">$array</span><span class="purple"> = </span><span class="blue">array</span><span class="purple"> (</span><span class="red">"size"</span><span class="purple"> =&gt; </span><span class="red">"XL"</span><span class="purple"> , </span><span class="red">"color"</span><span class="purple"> =&gt; </span><span class="red">"gold"</span><span class="purple">);</span><br />
-    <span class="blue"> print_r</span><span class="purple"> (</span><span class="blue">array_keys</span><span class="purple"> (</span><span class="sky">$array</span><span class="purple">)); </span><span class="green">// Array ( [0] =&gt; size [1] =&gt; color )</span><br />
-    <span class="sky">$days</span><span class="purple"> = </span><span class="blue">array</span><span class="purple"> (</span><span class="sc122">1</span><span class="purple">=&gt;</span><span class="red">"Mon"</span><span class="purple"> , </span><span class="red">"Tue"</span><span class="purple"> , </span><span class="red">"Wed"</span><span class="purple"> , </span><span class="red">"Thu"</span><span class="purple"> , </span><span class="red">"Fri"</span><span class="purple"> , </span><span class="red">"Sat"</span><span class="purple"> , </span><span class="red">"Sun"</span><span class="purple">);</span><br />
-    <span class="green">//array ( [1] =&gt; Mon [2] =&gt; Tue [3] =&gt; Wed [4] =&gt; Thu [5] =&gt; Fri [6] =&gt; Sat [7] =&gt; Sun )</span><br />
-    <span class="green">//If the initial index is a non-numeric string, subsequent indices are integers beginning at 0.</span><br />
-    <span class="sky">$whoops</span><span class="purple"> = </span><span class="blue">array</span><span class="purple"> (</span><span class="sc120">'Fri'</span><span class="purple">=&gt;</span><span class="red">"Black"</span><span class="purple"> , </span><span class="red">"Brown"</span><span class="purple"> , </span><span class="red">"Green"</span><span class="purple">);</span><br />
-    <span class="green">//Array ( [Fri] =&gt; Black [0] =&gt; Brown [1] =&gt; Green )</span><br />
+    <span class="red">$user</span><span class="purple"> = </span><span class="yellow">[</span><br />
+    <span class="green">"name"</span><span class="purple"> =&gt; </span><span class="green">"John"</span><span class="whitee"> , </span><br />
+    <span class="green">"login"</span><span class="purple"> =&gt; </span><span class="green">"root"</span><span class="whitee"> , </span><br />
+    <span class="green">"password"</span><span class="purple"> =&gt; </span><span class="green">"1234"</span><span class="whitee"> , </span><br />
+    <span class="green">"age"</span><span class="purple">=&gt;</span><span class="brown">25</span><span class="whitee"> , </span><br />
+    <span class="green">"hello"</span><br />
+    <span class="yellow">];</span><br />
+    <span class="red">$user</span><span class="yellow">[</span><span class="green">"name"</span><span class="yellow">]; </span><span class="comment">// John</span><br />
+    <span class="red">$user</span><span class="yellow">[</span><span class="brown">0</span><span class="yellow">]; </span><span class="comment">// hello</span><br />
+    <span class="comment">//"name" is KEY "John" is VALUE;</span><br />
+    <span class="red">$array</span><span class="purple"> = </span><span class="blue">array</span><span class="purple"> (</span><span class="green">"size"</span><span class="purple"> =&gt; </span><span class="green">"XL"</span><span class="whitee"> , </span><span class="green">"color"</span><span class="purple"> =&gt; </span><span class="green">"gold"</span><span class="purple">)<span class="whitee">;</span></span
+    ><br />
+    <span class="blue"> print_r</span><span class="purple"> (</span><span class="blue">array_values</span><span class="purple"> (</span><span class="red">$array</span><span class="purple">))<span class="whitee">;</span> </span><span class="comment">// Array ( [0] =&gt; XL [1] =&gt; gold )</span><br />
+    <span class="red">$array</span><span class="purple"> = </span><span class="blue">array</span><span class="purple"> (</span><span class="green">"size"</span><span class="purple"> =&gt; </span><span class="green">"XL"</span><span class="whitee"> , </span><span class="green">"color"</span><span class="purple"> =&gt; </span><span class="green">"gold"</span><span class="purple">)<span class="whitee">;</span></span
+    ><br />
+    <span class="blue"> print_r</span><span class="purple"> (</span><span class="blue">array_keys</span><span class="purple"> (</span><span class="red">$array</span><span class="purple">))<span class="whitee">;</span> </span><span class="comment">// Array ( [0] =&gt; size [1] =&gt; color )</span><br />
+    <span class="red">$days</span><span class="purple"> = </span><span class="blue">array</span><span class="purple"> (</span><span class="brown">1</span><span class="purple">=&gt;</span><span class="green">"Mon"</span><span class="whitee"> , </span><span class="green">"Tue"</span><span class="whitee"> , </span><span class="green">"Wed"</span><span class="whitee"> , </span><span class="green">"Thu"</span><span class="whitee"> , </span><span class="green">"Fri"</span><span class="whitee"> , </span><span class="green">"Sat"</span><span class="whitee"> , </span><span class="green">"Sun"</span><span class="purple">)<span class="whitee">;</span></span
+    ><br />
+    <span class="comment">//array ( [1] =&gt; Mon [2] =&gt; Tue [3] =&gt; Wed [4] =&gt; Thu [5] =&gt; Fri [6] =&gt; Sat [7] =&gt; Sun )</span><br />
+    <span class="comment">//If the initial index is a non-numeric string, subsequent indices are integers beginning at 0.</span><br />
+    <span class="red">$whoops</span><span class="purple"> = </span><span class="blue">array</span><span class="purple"> (</span><span class="sc120">'Fri'</span><span class="purple">=&gt;</span><span class="green">"Black"</span><span class="whitee"> , </span><span class="green">"Brown"</span><span class="whitee"> , </span><span class="green">"Green"</span><span class="purple">)<span class="whitee">;</span></span
+    ><br />
+    <span class="comment">//Array ( [Fri] =&gt; Black [0] =&gt; Brown [1] =&gt; Green )</span><br />
     $text = [true => 'a', 1 => '1', true => 'c', 1.8 => 'd' ]; <br />
-    print_r($text); // Array ( [1] => d ) <br />
+    print_r($text)<span class="whitee">;</span> // Array ( [1] => d ) <br />
     $text = ['a' => 1, 'b' => null];<br />
-    var_dump(array_key_exists('b', $text)); //true<br />
-    var_dump(isset($text['b'])); //false<br />
+    var_dump(array_key_exists('b', $text))<span class="whitee">;</span> //true<br />
+    var_dump(isset($text['b']))<span class="whitee">;</span> //false<br />
   </body>
 </html>

@@ -22,7 +22,7 @@ while ($i < 5)
     $a++;
 With the help of declare(ticks=N) and register_tick_function(), you can now execute code in between the statements/ticks. The register_tick_function specifies which function should be called when a tick event occurs. And the declare sets how many tick should pass, before a tick event occurs.
 
-With declare(ticks=1) and register_tick_function('someFunction'); you will call someFunction() code in between every statement/tick.
+With declare(ticks=1) and register_tick_function('someFunction')<span class="whitee">;</span> you will call someFunction() code in between every statement/tick.
 
 If you use declare(ticks=3), then someFunction() will be executed on every third statement/tick.
 
@@ -31,7 +31,7 @@ Example:
 function handler(){
     echo "x";
 }
-register_tick_function("handler");
+register_tick_function("handler")<span class="whitee">;</span>
 $i = 0;
 declare(ticks = 4) {
     while ($i < 9)

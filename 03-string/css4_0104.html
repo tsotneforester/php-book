@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
-    <span class="green"><a href="https://www.php.net/manual/en/function.htmlentities"></a>PHP.NET</span><br />
+    <span class="comment"><a href="https://www.php.net/manual/en/function.htmlentities"></a>PHP.NET</span><br />
     <span class="sky">$str</span><span class="purple"> = </span><span class="red"> "A 'quote' is &lt;b&gt;bold&lt;/b&gt;"</span><span class="purple">;</span><br />
-    <span class="blue"> print</span><span class="purple"> (</span><span class="blue">htmlentities</span><span class="purple"> (</span><span class="sky">$str</span><span class="purple">));</span><br />
-    <span class="blue"> print</span><span class="purple"> (</span><span class="blue">htmlspecialchars</span><span class="purple"> (</span><span class="sky">$str</span><span class="purple">));</span
+    <span class="blue"> print</span><span class="purple"> (</span><span class="blue">htmlentities</span><span class="purple"> (</span><span class="sky">$str</span><span class="purple">))<span class="whitee">;</span></span><br />
+    <span class="blue"> print</span><span class="purple"> (</span><span class="blue">htmlspecialchars</span><span class="purple"> (</span><span class="sky">$str</span><span class="purple">))<span class="whitee">;</span></span
     ><span class="black"
       ><br />
       The HTML output of the codes above will be the same </span
@@ -29,9 +29,9 @@
       The </span
     ><span class="blue">strip_tags</span><span class="purple">()</span><span class="blue">function</span><span class="black"> removes HTML tags from a </span><span class="blue">string</span><span class="purple">:</span><br />
     <span class="sky">$input</span><span class="purple"> = </span><span class="sc120">'&lt;p&gt;&lt;b&gt;Howdy&lt;/b&gt;, &amp;quot;Cowboy&amp;quot;&lt;/p&gt;'</span><span class="purple">;</span><br />
-    <span class="blue">echo</span><span class="sky"> $output</span><span class="purple"> = </span><span class="blue"> strip_tags</span><span class="purple"> (</span><span class="sky">$input</span><span class="purple">);</span><br />
+    <span class="blue">echo</span><span class="sky"> $output</span><span class="purple"> = </span><span class="blue"> strip_tags</span><span class="purple"> (</span><span class="sky">$input</span><span class="purple">)<span class="whitee">;</span></span><br />
     <span class="sc120">'Howdy, &amp;quot;Cowboy&amp;quot;'</span><br />
-    <span class="blue">echo</span><span class="sky"> $output</span><span class="purple"> = </span><span class="blue"> strip_tags</span><span class="purple"> (</span><span class="sky">$input</span><span class="purple"> , </span><span class="sc120">'&lt;b&gt;'</span><span class="purple">);</span><br />
+    <span class="blue">echo</span><span class="sky"> $output</span><span class="purple"> = </span><span class="blue"> strip_tags</span><span class="purple"> (</span><span class="sky">$input</span><span class="purple"> , </span><span class="sc120">'&lt;b&gt;'</span><span class="purple">)<span class="whitee">;</span></span><br />
     <span class="sc120">'&lt;b&gt;Howdy&lt;/b&gt;, &amp;quot;Cowboy&amp;quot;'</span
     ><span class="black"
       ><br />
