@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>01-03</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <p>PHP 8 introduces the new match expression. A powerful feature that will often be the better choice to using switch. So what exactly are the differences?</p>
+    <pre>
+      switch ($statusCode) {
+        case 200:
+        case 300:
+            $message = null;
+            break;
+        case 400:
+            $message = 'not found';
+            break;
+        case 500:
+            $message = 'server error';
+            break;
+        default:
+            $message = 'unknown status code';
+            break;
+    }
+
+  </pre
+    >
+    <p>Here's its match equivalent:</p>
+
+    <pre>
+      $message = match ($statusCode) {
+        200, 300 => null,
+        400 => 'not found',
+        500 => 'server error',
+        default => 'unknown status code',
+    };
+    </pre>
+
+    <p>it doesn't require a break statement</p>
+    <p>match will do strict type checks instead of loose ones. It's like using === instead of ==. People will probably disagree whether that's a good thing or not, but that's a topic on its own.</p>
+  </body>
+</html>

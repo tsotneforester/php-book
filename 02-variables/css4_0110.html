@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>01-03</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    When PHP is executing your script, the execution can be seen as a lot of statements being executed. Most statements cause a Tick, though not necessarily all statements do so. (Manual says: Typically, condition expressions and argument expressions are not tickable.)
+    <pre>
+
+This block would normally cause 5 ticks, as you are executing 5 statements:
+
+$a = 1;
+$B = 2;
+$a = 3;
+$B = 4;
+$a = 5;
+And this block would normally cause 5 ticks, and one more tick as the end of the while loop also is counted as a statement/tick:
+
+while ($i < 5)
+    $a++;
+With the help of declare(ticks=N) and register_tick_function(), you can now execute code in between the statements/ticks. The register_tick_function specifies which function should be called when a tick event occurs. And the declare sets how many tick should pass, before a tick event occurs.
+
+With declare(ticks=1) and register_tick_function('someFunction'); you will call someFunction() code in between every statement/tick.
+
+If you use declare(ticks=3), then someFunction() will be executed on every third statement/tick.
+
+Example:
+
+function handler(){
+    echo "x";
+}
+register_tick_function("handler");
+$i = 0;
+declare(ticks = 4) {
+    while ($i < 9)
+        echo ++$i;
+}
+This script will output: 1234x5678x9 It's that simple.
+</pre
+    >
+  </body>
+</html>
