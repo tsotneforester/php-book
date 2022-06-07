@@ -28,7 +28,7 @@ body {
 
 .disabled {
   pointer-events: none;
-  filter: grayscale(100%)<span class="whitee">;</span>
+  filter: grayscale(100%);
 }
 
 div,
@@ -167,11 +167,11 @@ button[class^="control"] {
 
 @keyframes example {
   from {
-    color: rgb(3, 3, 3)<span class="whitee">;</span>
+    color: rgb(3, 3, 3);
   }
 
   to {
-    color: rgb(185, 12, 35)<span class="whitee">;</span>
+    color: rgb(185, 12, 35);
   }
 }
 

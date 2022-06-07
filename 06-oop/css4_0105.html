@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>01-03</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    urlencode encodes spaces as + symbols while rawurlencode encodes them as %20 (google search) <br />
+    <span class="sky">$name</span><span class="purple"> = </span><span class="red"> "Programming PHP"</span><span class="purple">;</span><br />
+    <span class="sky">$output</span><span class="purple"> = </span><span class="blue">rawurlencode</span><span class="purple"> (</span><span class="sky">$name</span><span class="purple">)<span class="whitee">;</span></span><br />
+    <span class="blue">echo </span><span class="red">"http://localhost/</span><span class="black">{$output}</span><span class="red">"</span><span class="purple">;</span><br />
+    <span class="comment">//http://localhost/Programming%20PHP</span><br />
+    <span class="sky">$encoded</span><span class="purple"> = </span><span class="sc120">'Programming%20PHP'</span><span class="purple">;</span><br />
+    <span class="blue">echo</span><span class="blue"> rawurldecode</span><span class="purple"> (</span><span class="sky">$encoded</span><span class="purple">)<span class="whitee">;</span></span><br />
+    <span class="comment">//Programming PHP</span><br />
+  </body>
+</html>
