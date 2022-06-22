@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>01-03</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <span class="comment">//Most database systems require that string literals in your SQL queries be escaped. SQL’s encoding scheme is pretty simple—single quotes, double quotes, so if string goes to SQL database, such chars must be escaped</span><br />
+    <span class="comment"
+      ><br />
+      $string = &lt;&lt;&lt; EOF<br />
+      "It's never going to work," she cried,<br />
+      as she hit the backslash (\) key.<br />
+      EOF;<br /> </span
+    ><br />
+    <span class="sky">$string</span><span class="purple"> = </span><span class="blue">addslashes</span><span class="purple"> (</span><span class="sky">$string</span><span class="purple">)<span class="whitee">;</span></span><br />
+    <span class="comment">//\"It\'s never going to work,\" she cried, as she hit the backslash (\\) key.</span><br />
+    <span class="blue">echo</span><span class="blue"> stripslashes</span><span class="purple"> (</span><span class="sky">$string</span><span class="purple">)<span class="whitee">;</span></span><br />
+    <span class="comment">//"It's never going to work," she cried, as she hit the backslash (\) key.</span><br />
+    <span class="blue">stripslashes</span><span class="black"> is opposite of </span><span class="blue">addslashes</span><span class="purple">;</span><br />
+
+    <span class="sky">$string</span><span class="purple"> = </span><span class="blue">addcslashes</span><span class="purple"> (</span><span class="sky">$string</span><span class="purple">,</span><span class="red">"%"</span><span class="purple">)<span class="whitee">;</span></span> <br />
+
+    <span class="comment">//if you search '%' phrase in database with "SELECT * from ... WHERE ... LIKE '%$variable%'", "%%%" won't find row, so you should escape it.</span>
+  </body>
+</html>

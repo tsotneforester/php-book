@@ -2,33 +2,15 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>01-02</title>
+    <title>Constructor & Desructor</title>
     <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
-    $text = [1, 2, 3, 4, 5]; echo $text[-1]; // does not work <br />
-    <span class="sky">$arr1</span><span class="purple"> = </span><span class="black"> </span><span class="purple">[</span><span class="red">"John"</span><span class="purple"> , </span><span class="red">"rooty"</span><span class="purple"> , </span><span class="red">"1234"</span><span class="purple">];</span><br />
-    <span class="sky">$arr2</span><span class="purple"> = </span><span class="blue">array</span><span class="purple"> (</span><span class="red">"John"</span><span class="purple"> , </span><span class="red">"rooty"</span><span class="purple"> , </span><span class="red">"1234"</span><span class="purple">)<span class="whitee">;</span></span><br />
-    <span class="blue">echo</span><span class="sky"> $arr1</span><span class="purple">[</span><span class="brown">1</span><span class="purple">]; </span><span class="comment">// rooty</span><br />
-    <span class="blue">echo</span><span class="sky"> $arr2</span><span class="purple">[</span><span class="brown">1</span><span class="purple">]; </span><span class="comment">// rooty</span><br />
-    <span class="sky">$arr1</span><span class="purple">[]</span><span class="purple"> = </span><span class="brown">25</span><span class="purple">; </span><span class="comment">// add new into array;</span><br />
-    <span class="blue"> print_r</span><span class="purple"> (</span><span class="sky">$arr1</span><span class="purple">)<span class="whitee">;</span> </span><span class="comment">// Array ( [0] =&gt; John [1] =&gt; rooty [2] =&gt; 1234 [3] =&gt; 25 )</span><br />
-    <span class="sky">$arr1</span><span class="purple">[</span><span class="brown">5</span><span class="purple">]</span><span class="purple"> = </span><span class="brown">25</span><span class="purple">; </span><span class="comment">// add new into array;</span><br />
-    <span class="blue"> print_r</span><span class="purple"> (</span><span class="sky">$arr1</span><span class="purple">)<span class="whitee">;</span> </span><span class="comment">// Array ( [0] =&gt; John [1] =&gt; rooty [2] =&gt; 1234 [5] =&gt; 25 )</span><br />
-    <span class="blue">count</span><span class="purple"> (</span><span class="sky">$arr1</span><span class="purple">)<span class="whitee">;</span> </span><span class="comment">// 4 - counts number of memebers in array</span><br />
-    <span class="comment">//count() and sizeof() are the same</span><br />
-    <span class="blue">var_dump</span><span class="purple"> (</span><span class="sky">$arr1</span><span class="purple">)<span class="whitee">;</span></span><br />
-    <span class="comment">//array(4) { [0]=&gt; string(4) "John" [1]=&gt; string(5) "rooty" [2]=&gt; string(4) "1234" [3]=&gt; int(25) }</span><br />
-    <span class="comment">//echo "&lt;pre&gt;"; // for array better look;</span><br />
-    <span class="comment">//use print_r() for displayng array instead of echo;</span><br />
-    <span class="comment">//$cities[0]; // returns string of first array;</span><br />
-    <span class="sky">$cities</span><span class="purple"> = </span><span class="purple">[</span><span class="sc120">'Tbilisi'</span><span class="purple"> , </span><span class="red">"Rome"</span><span class="purple"> , </span><span class="purple">[</span><span class="sc120">'Gori'</span><span class="purple"> , </span><span class="sc120">'Khashuri'</span><span class="purple">]];</span><br />
-    <span class="sky">$cities</span><span class="purple"> = </span><span class="purple">[</span><span class="sc120">'Tbilisi'</span><span class="purple"> , </span><span class="red">"Rome"</span><span class="purple"> , </span><span class="purple">[</span><span class="sc120">'Gori'</span><span class="purple"> , </span><span class="sc120">'Khashuri'</span><span class="purple">]];</span><br />
-    <span class="blue">echo</span><span class="sky"> $cities</span><span class="purple">[</span><span class="brown">2</span><span class="purple">][</span><span class="brown">1</span><span class="purple">]; </span><span class="comment">// Khashuri</span><br />
-    <span class="comment">//<a href="https://www.php.net/manual/en/ref.array.php">array functions</a> - </span><br />
-    unset() array or array member - check it $text = [1, 2, 3 ];<br />
-    unset($text[0], $text[1], $text[2])<span class="whitee">;</span><br />
-    $text[] =5;<br />
-    print_r($text)<span class="whitee">;</span> //Array ( [3] => 5 )<br />
+    <code
+      ><span style="color: #000000">
+        <span style="color: #0000bb">&lt;?php<br /></span><span style="color: #007700">class&nbsp;</span><span style="color: #0000bb">Pirovneba&nbsp;</span><span style="color: #007700">{<br />&nbsp;&nbsp;public&nbsp;</span><span style="color: #0000bb">$fname</span><span style="color: #007700">;<br />&nbsp;&nbsp;public&nbsp;</span><span style="color: #0000bb">$lname</span><span style="color: #007700">;<br /><br />&nbsp;&nbsp;function&nbsp;</span><span style="color: #0000bb">__construct</span><span style="color: #007700">(</span><span style="color: #0000bb">$name</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000bb">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000bb">name&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000bb">$name</span><span style="color: #007700">;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span><span style="color: #dd0000">"This&nbsp;Person&nbsp;is&nbsp;</span><span style="color: #007700">{</span><span style="color: #0000bb">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000bb">name</span
+        ><span style="color: #007700">}</span><span style="color: #dd0000">."</span><span style="color: #007700">;<br />&nbsp;&nbsp;}<br />};<br /><br /></span><span style="color: #0000bb">$apple&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000bb">Pirovneba</span><span style="color: #007700">(</span><span style="color: #dd0000">"Tsotne"</span><span style="color: #007700">);&nbsp;</span><span style="color: #ff8000">//This&nbsp;Person&nbsp;is&nbsp;Tsotne.<br /><br /></span><span style="color: #0000bb">?&gt;</span>
+      </span>
+    </code>
   </body>
 </html>

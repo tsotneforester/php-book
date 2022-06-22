@@ -6,9 +6,23 @@
     <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
-    $array = ["bmw", "toyota", "chevrolet", "opel"]; <br />
-    foreach ($array as $key => $value) { echo $key . ":" . $value . "<br />"; } <br />
-    echo $value;// after foreach loop $value is not destroyed, so you should unset it <br />
-    alternative sintax is instead of curly braces use :...endforeach for every loop that works
+    <code
+      ><span style="color: #000000">
+        <span style="color: #0000bb">$array </span><span style="color: #007700">= [</span><span style="color: #dd0000">"bmw"</span><span style="color: #007700">, </span><span style="color: #dd0000">"toyota"</span><span style="color: #007700">, </span><span style="color: #dd0000">"chevrolet"</span><span style="color: #007700">, </span><span style="color: #dd0000">"opel"</span><span style="color: #007700">];<br />foreach (</span><span style="color: #0000bb">$array </span><span style="color: #007700">as </span><span style="color: #0000bb">$key </span><span style="color: #007700">=&gt; </span><span style="color: #0000bb">$value</span
+        ><span style="color: #007700"
+          >) {<br />
+          echo </span
+        ><span style="color: #0000bb">$key </span><span style="color: #007700">. </span><span style="color: #dd0000">":" </span><span style="color: #007700">. </span><span style="color: #0000bb">$value </span><span style="color: #007700">. </span><span style="color: #dd0000">"&lt;br&gt;"</span><span style="color: #007700">; <br />}<br /><br /></span><span style="color: #ff8000">// 0:bmw<br />// 1:toyota<br />// 2:chevrolet<br />// 3:opel<br /><br /></span><span style="color: #007700">echo </span><span style="color: #0000bb">$value</span><span style="color: #007700">; </span><span style="color: #ff8000">//opel<br /></span> <br />
+      </span>
+    </code>
+
+    after foreach loop $value is not destroyed, so you should unset it <br />
+    alternative sintax is instead of curly braces use :...endforeach for every loop that works <br />
+
+    <code
+      ><span style="color: #000000">
+        <span style="color: #0000bb">&lt;?php<br /><br />$array </span><span style="color: #007700">= [</span><span style="color: #dd0000">"bmw"</span><span style="color: #007700">, </span><span style="color: #dd0000">"toyota"</span><span style="color: #007700">, </span><span style="color: #dd0000">"chevrolet"</span><span style="color: #007700">, </span><span style="color: #dd0000">"opel"</span><span style="color: #007700">];<br />foreach (</span><span style="color: #0000bb">$array </span><span style="color: #007700">as </span><span style="color: #0000bb">$key </span><span style="color: #007700">=&gt; </span><span style="color: #0000bb">$value</span><span style="color: #007700">) : echo </span><span style="color: #0000bb">$key </span><span style="color: #007700">. </span><span style="color: #dd0000">":" </span><span style="color: #007700">. </span><span style="color: #0000bb">$value </span><span style="color: #007700">. </span><span style="color: #dd0000">"&lt;br&gt;"</span><span style="color: #007700">; endforeach;<br /><br /></span><span style="color: #0000bb">?&gt;<br /></span>
+      </span>
+    </code>
   </body>
 </html>

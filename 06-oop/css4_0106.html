@@ -6,22 +6,24 @@
     <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
-    <span class="comment">//Most database systems require that string literals in your SQL queries be escaped. SQL’s encoding scheme is pretty simple—single quotes, double quotes, so if string goes to SQL database, such chars must be escaped</span><br />
-    <span class="comment"
-      ><br />
-      $string = &lt;&lt;&lt; EOF<br />
-      "It's never going to work," she cried,<br />
-      as she hit the backslash (\) key.<br />
-      EOF;<br /> </span
-    ><br />
-    <span class="sky">$string</span><span class="purple"> = </span><span class="blue">addslashes</span><span class="purple"> (</span><span class="sky">$string</span><span class="purple">)<span class="whitee">;</span></span><br />
-    <span class="comment">//\"It\'s never going to work,\" she cried, as she hit the backslash (\\) key.</span><br />
-    <span class="blue">echo</span><span class="blue"> stripslashes</span><span class="purple"> (</span><span class="sky">$string</span><span class="purple">)<span class="whitee">;</span></span><br />
-    <span class="comment">//"It's never going to work," she cried, as she hit the backslash (\) key.</span><br />
-    <span class="blue">stripslashes</span><span class="black"> is opposite of </span><span class="blue">addslashes</span><span class="purple">;</span><br />
-
-    <span class="sky">$string</span><span class="purple"> = </span><span class="blue">addcslashes</span><span class="purple"> (</span><span class="sky">$string</span><span class="purple">,</span><span class="red">"%"</span><span class="purple">)<span class="whitee">;</span></span> <br />
-
-    <span class="comment">//if you search '%' phrase in database with "SELECT * from ... WHERE ... LIKE '%$variable%'", "%%%" won't find row, so you should escape it.</span>
+    <code
+      ><span style="color: #000000">
+        <span style="color: #0000bb">&lt;?php<br /></span><span style="color: #007700">class&nbsp;</span><span style="color: #0000bb">pi&nbsp;</span><span style="color: #007700">{<br />&nbsp;&nbsp;public&nbsp;static&nbsp;</span><span style="color: #0000bb">$value&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000bb">3.14159</span><span style="color: #007700">;<br />}<br /><br /></span><span style="color: #ff8000">//&nbsp;Get&nbsp;static&nbsp;property<br /></span><span style="color: #007700">echo&nbsp;</span><span style="color: #0000bb">pi</span><span style="color: #007700">::</span><span style="color: #0000bb">$value</span><span style="color: #007700">;&nbsp;&nbsp;</span><span style="color: #ff8000">//3.14159<br /></span><span style="color: #0000bb">?&gt;</span>
+      </span>
+    </code>
+    <hr />
+    <code
+      ><span style="color: #000000">
+        <span style="color: #0000bb">&lt;?php<br /></span><span style="color: #007700">class&nbsp;</span><span style="color: #0000bb">pi&nbsp;</span><span style="color: #007700">{<br />&nbsp;&nbsp;public&nbsp;static&nbsp;</span><span style="color: #0000bb">$value</span><span style="color: #007700">=</span><span style="color: #0000bb">3.14159</span><span style="color: #007700">;<br />&nbsp;&nbsp;public&nbsp;function&nbsp;</span><span style="color: #0000bb">staticValue</span><span style="color: #007700">()&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000bb">self</span><span style="color: #007700">::</span><span style="color: #0000bb">$value</span><span style="color: #007700">;<br />&nbsp;&nbsp;}<br />}<br /><br /></span><span style="color: #0000bb">$pi&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000bb">pi</span><span style="color: #007700">();<br />echo&nbsp;</span><span style="color: #0000bb">$pi</span><span style="color: #007700">-&gt;</span><span style="color: #0000bb">staticValue</span><span style="color: #007700">();&nbsp;</span><span style="color: #ff8000">//3.14159<br /></span
+        ><span style="color: #0000bb">?&gt;</span>
+      </span>
+    </code>
+    <hr />
+    <code
+      ><span style="color: #000000">
+        <span style="color: #0000bb">&lt;?php<br /></span><span style="color: #007700">class&nbsp;</span><span style="color: #0000bb">pi&nbsp;</span><span style="color: #007700">{<br />&nbsp;&nbsp;public&nbsp;static&nbsp;</span><span style="color: #0000bb">$value</span><span style="color: #007700">=</span><span style="color: #0000bb">3.14159</span><span style="color: #007700">;<br />}<br /><br />class&nbsp;</span><span style="color: #0000bb">x&nbsp;</span><span style="color: #007700">extends&nbsp;</span><span style="color: #0000bb">pi&nbsp;</span><span style="color: #007700">{<br />&nbsp;&nbsp;public&nbsp;function&nbsp;</span><span style="color: #0000bb">xStatic</span><span style="color: #007700">()&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000bb">parent</span><span style="color: #007700">::</span><span style="color: #0000bb">$value</span><span style="color: #007700">;<br />&nbsp;&nbsp;}<br />}<br /><br /></span><span style="color: #ff8000">//&nbsp;Get&nbsp;value&nbsp;of&nbsp;static&nbsp;property&nbsp;directly&nbsp;via&nbsp;child&nbsp;class<br /></span><span style="color: #007700">echo&nbsp;</span><span style="color: #0000bb">x</span
+        ><span style="color: #007700">::</span><span style="color: #0000bb">$value</span><span style="color: #007700">;&nbsp;</span><span style="color: #ff8000">//3.14159<br /><br />//&nbsp;or&nbsp;get&nbsp;value&nbsp;of&nbsp;static&nbsp;property&nbsp;via&nbsp;xStatic()&nbsp;method<br /></span><span style="color: #0000bb">$x&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000bb">x</span><span style="color: #007700">();<br />echo&nbsp;</span><span style="color: #0000bb">$x</span><span style="color: #007700">-&gt;</span><span style="color: #0000bb">xStatic</span><span style="color: #007700">();&nbsp;</span><span style="color: #ff8000">//3.14159<br /></span><span style="color: #0000bb">?&gt;</span>
+      </span>
+    </code>
   </body>
 </html>

@@ -1,6 +1,12 @@
 body {
   font-size: 22px;
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  padding: 15px;
+}
+
+hr {
+  border: 10px solid gray;
+  border-radius: 5px;
 }
 
 .grid {
@@ -71,7 +77,7 @@ img {
 
 .white {
   font-style: italic;
-  color: #ffffff;
+  color: #000000;
 }
 
 .blue {

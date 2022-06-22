@@ -23,10 +23,10 @@ Thinking<br />
 </form>
 <?php
 
-if (isset($_POST['s'])) {
-   $description = join (' ', $_POST['attributes']);
-   echo "You have a {$description} personality.";
-}
-      ?>
+  if (isset($_POST['s'])) {
+    $description = join (' ', $_POST['attributes']);
+    echo "You have a {$description} personality.";
+  }
+?>
 </body>
 </html>

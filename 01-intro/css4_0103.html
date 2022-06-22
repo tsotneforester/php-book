@@ -6,27 +6,20 @@
     <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
-    <span class="comment"><a href="https://www.php.net/manual/en/function.printf" target="_blank">Printf</a></span
-    ><br />
-    <span class="blue">printf</span><span class="yellow"> (</span><span class="green">"[%s]"</span><span class="yellow"> , </span><span class="black"> </span><span class="green">'monkey'</span><span class="yellow">)<span class="whitee">;</span></span
-    ><span class="comment">//[monkey]</span><br />
-    <span class="blue">printf</span><span class="yellow"> (</span><span class="green">"[%10s]"</span><span class="yellow"> , </span><span class="black"> </span><span class="green">'monkey'</span><span class="yellow">)<span class="whitee">;</span> </span><span class="comment">// [ monkey]</span><br />
-    <span class="blue">printf</span><span class="yellow"> (</span><span class="green">"[%-10s]"</span><span class="yellow"> , </span><span class="black"> </span><span class="green">'monkey'</span><span class="yellow">)<span class="whitee">;</span> </span><span class="comment">// [monkey ]</span><br />
-    <span class="blue">printf</span><span class="yellow"> (</span><span class="green">"[%010s]"</span><span class="yellow"> , </span><span class="black"> </span><span class="green">'monkey'</span><span class="yellow">)<span class="whitee">;</span></span
-    ><span class="comment">//[0000monkey]</span><br />
-    <span class="blue">printf</span><span class="yellow"> (</span><span class="green">"[%'#10s]"</span><span class="yellow"> , </span><span class="black"> </span><span class="green">'monkey'</span><span class="yellow">)<span class="whitee">;</span></span
-    ><span class="comment">//[####monkey]</span><br />
-    <span class="blue">printf</span><span class="yellow"> (</span><span class="green">'%.2f'</span><span class="yellow"> , </span><span class="green">27.452</span><span class="yellow">)<span class="whitee">;</span> </span><span class="comment">// 27.45</span><br />
-    <span class="blue">printf</span><span class="yellow"> (</span><span class="green">'%.2f%% Complete'</span><span class="yellow"> , </span><span class="green">2.1</span><span class="yellow">)<span class="whitee">;</span> </span><span class="comment">// 2.10% Complete</span><br />
+    <span class="comment"><a href="https://www.php.net/manual/en/function.printf" target="_blank">Printf</a></span> <br />
 
-    <span class="white">
-      There are four ways to send output to the browser
-      <ul>
-        <li><span class="blue">echo</span> - lets you print many values at once</li>
-        <li><span class="blue">print</span><span class="yellow">()</span> - prints only one value</li>
-        <li><span class="blue">printf</span><span class="yellow">()</span> - function builds a formatted string by inserting values into a template.</li>
-        <li><span class="blue">print_r</span><span class="yellow">()</span> - useful for arrays, objects, and other things</li>
-      </ul> </span
-    ><br />
+    <code
+      ><span style="color: #000000">
+        <span style="color: #0000bb">printf </span><span style="color: #007700">(</span><span style="color: #dd0000">"[%s]" </span><span style="color: #007700">, </span><span style="color: #dd0000">'monkey'</span><span style="color: #007700">);</span><span style="color: #ff8000">//[monkey]<br /></span><span style="color: #0000bb">printf </span><span style="color: #007700">(</span><span style="color: #dd0000">"[%10s]" </span><span style="color: #007700">, </span><span style="color: #dd0000">'monkey'</span><span style="color: #007700">); </span><span style="color: #ff8000">// [ monkey]<br /></span><span style="color: #0000bb">printf </span><span style="color: #007700">(</span><span style="color: #dd0000">"[%-10s]" </span><span style="color: #007700">, </span><span style="color: #dd0000">'monkey'</span><span style="color: #007700">); </span><span style="color: #ff8000">// [monkey ]<br /></span><span style="color: #0000bb">printf </span><span style="color: #007700">(</span><span style="color: #dd0000">"[%010s]" </span><span style="color: #007700">, </span
+        ><span style="color: #dd0000">'monkey'</span><span style="color: #007700">);</span><span style="color: #ff8000">//[0000monkey]<br /></span><span style="color: #0000bb">printf </span><span style="color: #007700">(</span><span style="color: #dd0000">"[%'#10s]" </span><span style="color: #007700">, </span><span style="color: #dd0000">'monkey'</span><span style="color: #007700">);</span><span style="color: #ff8000">//[####monkey]<br /></span><span style="color: #0000bb">printf </span><span style="color: #007700">(</span><span style="color: #dd0000">'%.2f' </span><span style="color: #007700">, </span><span style="color: #0000bb">27.452</span><span style="color: #007700">); </span><span style="color: #ff8000">// 27.45<br /></span><span style="color: #0000bb">printf </span><span style="color: #007700">(</span><span style="color: #dd0000">'%.2f%% Complete' </span><span style="color: #007700">, </span><span style="color: #0000bb">2.1</span><span style="color: #007700">); </span><span style="color: #ff8000">// 2.10% Complete<br /><br /></span>
+      </span>
+    </code>
+
+    <span class="white"> There are four ways to send output to the browser </span><br />
+    <code
+      ><span style="color: #000000">
+        <span style="color: #007700">echo  </span><span style="color: #ff8000">//lets you print many values at once<br /></span><span style="color: #007700">print() </span><span style="color: #ff8000">// prints only one value<br /></span><span style="color: #0000bb">printf</span><span style="color: #007700">() </span><span style="color: #ff8000">// function builds a formatted string by inserting values into a template.<br /></span><span style="color: #0000bb">print_r</span><span style="color: #007700">() </span><span style="color: #ff8000">// useful for arrays, objects, and other things<br /><br /></span>
+      </span>
+    </code>
   </body>
 </html>

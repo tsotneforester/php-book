@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>01-01</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <hr />
+    <span class="white">The <span class="blue">json_decode</span><span class="yellow">()</span> function is used to decode or convert a JSON object to a PHP object.</span>
+
+    <table>
+      <tr>
+        <th>Parameter</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>string</td>
+        <td>Required. Specifies the value to be decoded</td>
+      </tr>
+      <tr>
+        <td>assoc</td>
+        <td>Optional. Specifies a Boolean value. When set to true, the returned object will be converted into an associative array. When set to false, it returns an object. False is default</td>
+      </tr>
+    </table>
+
+    <code
+      ><span style="color: #000000">
+        <span style="color: #0000bb">&lt;?php<br /><br />$jsonobj </span><span style="color: #007700">= </span><span style="color: #dd0000">'{"Peter":35,"Ben":37,"Joe":43}'</span><span style="color: #007700">;<br /></span><span style="color: #0000bb">var_dump</span><span style="color: #007700">(</span><span style="color: #0000bb">json_decode</span><span style="color: #007700">(</span><span style="color: #0000bb">$jsonobj</span><span style="color: #007700">)); </span><span style="color: #ff8000">//object(stdClass)#1 (3) { ["Peter"]=&gt; int(35) ["Ben"]=&gt; int(37) ["Joe"]=&gt; int(43) } $obj-&gt;Peter<br /></span><span style="color: #0000bb">var_dump</span><span style="color: #007700">(</span><span style="color: #0000bb">json_decode</span><span style="color: #007700">(</span><span style="color: #0000bb">$jsonobj</span><span style="color: #007700">, </span><span style="color: #0000bb">true</span><span style="color: #007700">)); array(</span><span style="color: #0000bb">3</span><span style="color: #007700">) {[</span><span style="color: #dd0000">"Peter"</span><span style="color: #007700">]=&gt; </span><span style="color: #0000bb">int</span><span style="color: #007700">(</span
+        ><span style="color: #0000bb">35</span><span style="color: #007700">) [</span><span style="color: #dd0000">"Ben"</span><span style="color: #007700">]=&gt; </span><span style="color: #0000bb">int</span><span style="color: #007700">(</span><span style="color: #0000bb">37</span><span style="color: #007700">) [</span><span style="color: #dd0000">"Joe"</span><span style="color: #007700">]=&gt; </span><span style="color: #0000bb">int</span><span style="color: #007700">(</span><span style="color: #0000bb">43</span><span style="color: #007700">)}<br /><br /></span><span style="color: #0000bb">?&gt;</span>
+      </span>
+    </code>
+    <hr />
+    <span class="white">The <span class="blue">json_encode</span><span class="yellow">()</span> function is used to encode a value to JSON format.</span> <br />
+    <br />
+
+    <code
+      ><span style="color: #000000">
+        <span style="color: #0000bb">$age </span><span style="color: #007700">= array(</span><span style="color: #dd0000">"Peter"</span><span style="color: #007700">=&gt;</span><span style="color: #0000bb">35</span><span style="color: #007700">, </span><span style="color: #dd0000">"Ben"</span><span style="color: #007700">=&gt;</span><span style="color: #0000bb">37</span><span style="color: #007700">, </span><span style="color: #dd0000">"Joe"</span><span style="color: #007700">=&gt;</span><span style="color: #0000bb">43</span><span style="color: #007700">);<br />echo </span><span style="color: #0000bb">json_encode</span><span style="color: #007700">(</span><span style="color: #0000bb">$age</span><span style="color: #007700">);</span><span style="color: #ff8000">//{"Peter":35,"Ben":37,"Joe":43}<br /></span><span style="color: #0000bb">$cars </span><span style="color: #007700">= array(</span><span style="color: #dd0000">"Volvo"</span><span style="color: #007700">, </span><span style="color: #dd0000">"BMW"</span><span style="color: #007700">, </span><span style="color: #dd0000">"Toyota"</span><span style="color: #007700">);<br />echo </span
+        ><span style="color: #0000bb">json_encode</span><span style="color: #007700">(</span><span style="color: #0000bb">$cars</span><span style="color: #007700">);</span><span style="color: #ff8000">//["Volvo","BMW","Toyota"]<br /><br /></span>
+      </span>
+    </code>
+  </body>
+</html>

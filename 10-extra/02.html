@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Git</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://readme.so/editor" target="_blank">Readme Creator</a>
+    <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables" target="_blank">Cheatsheet 2</a>
+    <a href="https://medium.com/analytics-vidhya/writing-github-readme-e593f278a796" target="_blank">Cheatsheet 1</a>
+    <a href="https://tabletomarkdown.com/" target="_blank">Table to Markdown</a><br />
+
+    The first thing you should do when you install Git is to set your user name and email address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating:
+
+    <br /><kbd>$ git config --global user.name "John Doe"</kbd> <br /><kbd>$ git config --global user.email johndoe@example.com</kbd>
+
+    By default Git will create a branch called master when you create a new repository with git init. From Git version 2.28 onwards, you can set a different name for the initial branch.
+    <br /><kbd>$ git config --global init.defaultBranch main</kbd>
+
+    <br /><kbd>git config --list</kbd> - command to list all the settings Git can find at that point
+
+    <kbd>git init</kbd> - This command will generate a hidden .git directory for your project, where Git stores all internal tracking data for the current repository. <br />
+
+    <kbd>git stash</kbd> -
+
+    <table>
+      <tr>
+        <th style="padding: 0 15px">
+          <b><i>git add</i></b>
+        </th>
+        <th>-A</th>
+        <th>.</th>
+        <th>-u</th>
+      </tr>
+      <tr>
+        <td>New files</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td>Modified files</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Deleted files</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Files with a dot</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Current directory</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Higher directories</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>Yes</td>
+      </tr>
+    </table>
+
+    <kbd>git commit -m "..." -m "..."</kbd> - commit name and description <br />
+    <kbd>git commit -a -m</kbd> - If you have changes in your tracked file - and want all of them included in the next commit - you can make use of the "-a" parameter and thereby omit the "git add" step
+
+    <table>
+      <tr>
+        <th colspan="2">git status --short</th>
+      </tr>
+      <tr>
+        <td style="padding: 0 15px">
+          <b><i>??</i></b>
+        </td>
+        <td>Untracked files</td>
+      </tr>
+      <tr>
+        <td style="padding: 0 15px">
+          <b><i>A</i></b>
+        </td>
+        <td>Files added to stage</td>
+      </tr>
+      <tr>
+        <td style="padding: 0 15px">
+          <b><i>M</i></b>
+        </td>
+        <td>Modified files</td>
+      </tr>
+      <tr>
+        <td style="padding: 0 15px">
+          <b><i>D</i></b>
+        </td>
+        <td>Deleted files</td>
+      </tr>
+    </table>
+
+    <br /><kbd>git ls-files</kbd> - list data in staging area <br /><kbd>git log</kbd> - commit log list <br /><kbd>git reflog</kbd> - commit full log list with reseted commits in it <br /><kbd>git log --oneline</kbd> - short version of commit log list <br /><kbd>git log --oneline --graph --all</kbd> - shows all branch commits visually
+    <hr />
+
+    <kbd>git branch</kbd> - lists branches <br />
+    <kbd>git branch NewBranch</kbd> - creates new branch with name <br />
+    <kbd>git branch -d NewBranch</kbd> - Delete local branch, One rule of local Git branch deletion is that you cannot delete a branch that is currently checked out<br />
+    <kbd>git branch -D NewBranch</kbd> - Force Delete local branch<br />
+    <kbd>git checkout OldBranch</kbd> - activates branch <br />
+    <kbd>git checkout NewBranch</kbd> - <span style="color: red">pathspec 'NewBranch' did not match any file(s) known to git</span> <br />
+    <kbd>git checkout -b NewBranch</kbd> - creates new branch with name and activates it, that's short version of <b><i>git branch NewBranch + git checkout NewBranch </i></b> <br />
+    <kbd>git switch OldBranch</kbd> - same as <b><i>git checkout OldBranch</i></b
+    >, but for only branches as <b><i>git checkout</i></b> is used for both branches and commits. <br />
+    <kbd>git switch -c NewBranch</kbd> - symonim of <i><b>git checkout -b NewBranch</b></i
+    ><br />
+    <kbd>git switch -</kbd> shorthand that switches to the previous branch before we switched<br />
+
+    <hr />
+    <h1>Restore</h1>
+    <kbd>git restore</kbd> is a new command that has been introduced (last summer) in Git 2.23 together with <kbd>git switch</kbd>. Their purposes are to simplify and separate the use cases of git checkout that does too many things. <kbd>git checkout</kbd> can be used to switch branches (and also to create a new branch before switching to it). This functionality has been extracted into <kbd>git switch</kbd>. <kbd>git checkout</kbd> can also be used to restore files to the state they were on a specified commit. This functionality has been extracted into <kbd>git restore</kbd>. They can still be performed by git checkout but the new commands are easier to use and less confusing.
+    <hr />
+    <h1>Unstaged Changes</h1>
+    <kbd>git checkout index.html</kbd> undoes any unstaged change to index.html or returnes repo to last commit of index.html, for newly created unstaged or staged files, this does not change anything <br />
+    <kbd>git restore index.html</kbd> <br />
+    <kbd>git checkout .</kbd> undoes any unstaged or staged change, returnes repo to last commit. perfect way of handling last staged or unstaged commits<br />
+    <kbd>git restore .</kbd>
+
+    <hr />
+    <h1>Staged Changes</h1>
+    <kbd>git restore --staged index.html / .</kbd> undoes any staged change to index.html or returnes repo staged files to editing mode, changes are kept, but are no more staged. <br />
+    <kbd>git reset index.html / .</kbd> does the same. its mixed mode of reset
+    <hr />
+    <h1>Reset Modes</h1>
+    <kbd>git reset</kbd> is all about moving HEAD of commit, for seperate files it is hardly used, for only unstage staged changes. <br />
+    <kbd>git reset --soft n42342n</kbd> : <b>uncommit</b> changes, changes are left staged <br /><kbd>git reset --mixed (default) n42342n</kbd> : <b>uncommit + unstage</b> changes , changes are left in working tree <br /><kbd>git reset --hard n42342n</kbd> : <b>uncommit + unstage + delete</b> changes, nothing left <br />
+    You can use instead of hash codes <kbd>head~</kbd>: <br /><kbd>git reset head~</kbd> - Last commit <br /><kbd>git reset head~1</kbd> - Last 2nd commit
+    <hr />
+    <h1>Remove Files</h1>
+    <kbd>git rm index.html</kbd> removes file from commit area and stages change <br />
+    <kbd>git rm -f index.html</kbd> removes file from commit + staging area, <b><i>git rm</i></b> can not remove file if not commited <br />
+    <kbd>git clean -dn</kbd> will list files, that are untracked you are going to delete <br />
+    <kbd>git clean -df</kbd> will delete every untracked file, you can use pure linux terminal command <b><i>rm file.txt</i></b>
+    <hr />
+    <h1>.gitignore</h1>
+    <kbd>.gitignore</kbd> file, it shoud be commited. to ignore file, add its name to <kbd>.gitignore</kbd> file, <br /><kbd>*.log</kbd> - means all log files to be ignored, for excluding, use <kbd>!test.log</kbd> To exclude folder, just enter <kbd>*web-app/*</kbd>
+
+    <hr />
+    last commit in branch is called HEAD, when you merge branches, last commit of merged branch get HEAD status, when you checkout commit, it detaches and so is not on any barnch, becomes temporary.
+
+    <br /><kbd>git branch NewBranch 03e3f3</kbd> add detached head to new branch
+
+    <hr />
+    <table>
+      <tr>
+        <th>git script</th>
+        <th>active Branch</th>
+        <th>master</th>
+        <th>comment</th>
+      </tr>
+      <tr>
+        <td><br /><kbd>git merge featureBranch</kbd></td>
+        <td>master</td>
+        <td>original</td>
+        <td>merges featureBranch to master branch and copies its commits, its fast-forward method and used when we have only feature branch commits, no additional commit is created</td>
+      </tr>
+      <tr>
+        <td><br /><kbd>git merge 456546CV</kbd></td>
+        <td>master</td>
+        <td>original</td>
+        <td>merges selected commit from featureBranch</td>
+      </tr>
+      <tr>
+        <td><br /><kbd>git merge --no-ff featureBranch -m "..."</kbd></td>
+        <td>master</td>
+        <td>original</td>
+        <td>takes all commits from featureBranch + new commit with comment, last 2 comments are the same</td>
+      </tr>
+      <tr>
+        <td><br /><kbd>git merge --squash featureBranch</kbd></td>
+        <td>master</td>
+        <td>original</td>
+        <td>takes all commits from featureBranch and adds it in master branch staging area, then commit nedeed.</td>
+      </tr>
+      <tr>
+        <td><br /><kbd>git merge featureBranch -m "…"</kbd></td>
+        <td>master</td>
+        <td>added</td>
+        <td>merges featureBranch all commit + new commit with comment, with master addd commit places by the time its creation.</td>
+      </tr>
+      <tr>
+        <td><br /><kbd>git merge --no-ff featureBranch -m "..."</kbd></td>
+        <td>master</td>
+        <td>added</td>
+        <td>merges featureBranch all commit + new commit with comment, with master addd commit places by the time its creation.</td>
+      </tr>
+      <tr>
+        <td><br /><kbd>git merge --squash featureBranch</kbd></td>
+        <td>master</td>
+        <td>added</td>
+        <td>takes all commits from featureBranch and adds it in master branch staging area, commit nedeed.</td>
+      </tr>
+      <tr>
+        <td><br /><kbd>git rebase master</kbd></td>
+        <td>featureBranch</td>
+        <td>added</td>
+        <td>takes master added commits and puts it on featureBranc but behind featureBranches own commits, and featureBranches own commits hash are changed. Than you can switch to master and merge featureBranch with fast-forwarding</td>
+      </tr>
+    </table>
+
+    <hr />
+    You can either clone repo from github, if it is not empty <br />
+    1)<kbd>git clone git@github.com:tsotneforester/room.git</kbd> <br />
+    2) without init, add and commit <br />
+    3) <kbd>$ git push origin (master)</kbd> <br />
+
+    If it is empty, you can creater same name folder and <br />
+    1) Create same name repo locally <br />
+    2) <kbd>$ git init</kbd> the repo, make adds and commits<br />
+    3) <kbd>$ git remote add origin https://github.com/tsotneforester/room.git </kbd> <br />
+    4) <kbd>git push origin (master)</kbd>
+
+    without SSH keygen on every push you will be aseked for username and password, where you must enter token code <br />
+
+    <hr />
+    <kbd>git branch -r</kbd> - lists remote traking branch <br /><kbd>git branch -a</kbd> - lists local branch + remote traking branch (good way to check if it is connected ro remote repository) <br />
+    to communicate with local and remote branches with pull and push, names should be same and both remote adn local tracking branches should be created<br />
+    <kbd>git ls-remote</kbd> - checks if repo is remote
+    <hr />
+
+    <i style="color: red">
+      <kbd>git revert</kbd> vs <kbd>git reset</kbd> <br />
+      when you <kbd>git revert</kbd> a commit, only the changes associated with that commit are undone. cumulative changes from subsequent commits are not affected and now log is created with revert comment. revert operation will take the specified commit, inverse the changes from that commit, and create a new "revert commit". even though the commit are no longer showing up in the log, it is not removed from git, if you know the commit hash you can reset to it. if you wish to undo every change since a given commit occured, you's want to issue a <kbd>git reset</kbd>, not <kbd>git revert</kbd>. if last commit comment needs to be changed, use <kbd>git commit --amend -m</kbd>
+    </i>
+    <p>there in no direc contact between local branch and remote branch, in the middle is locally placed "remote traking branch"</p>
+    <br />
+    <kbd>$ ssh-keygen</kbd> <a href="https://www.youtube.com/watch?v=4evR80g--9k">generates </a> key, copy it to github settings, that vital to comfortly communicate with github. <br />
+  </body>
+</html>
