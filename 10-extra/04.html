@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <h1>Easy Mode / <span style="color: red">Advanced Mode</span></h1>
+
+    <ul>
+      <li><b>node.js</b> and <b>nmp</b> must be installed</li>
+
+      <li><kbd>npm i -D tailwindcss</kbd> - installs tailwindcss in working directory</li>
+      <li><kbd>npx tailwindcss init</kbd> - creates <b>tailwind.config.js</b>, where you must edit content, to specify files with tailwind classes</li>
+      <br />
+      <textarea class="form-control" name="" id="" cols="50" rows="8">
+        module.exports = {
+          // darkMode: ["class", '[data-mode="dark"]'],
+          darkMode: "class", //&lt;html lang="en" class="dark"&gt;
+          // darkMode: "media", //media sees user preference systemfide
+          content: ["./*/*.{html,js}"],
+          theme: {
+            screens: {
+              'sm': '576px',
+              'md': '960px',
+              'lg': '1440px',
+            },
+            colors: {
+              transparent: 'transparent',
+              current: 'currentColor',
+              'white': '#ffffff',
+              'purple': '#3f3cbb',
+            },
+            extend: {
+              fontFamily: {
+                kumbh: ["Kumbh Sans", "sans-serif"],
+              },
+            },
+          },
+          plugins: [],
+        };
+        
+        </textarea
+      >
+      <li>create <b>input.css</b> with @tailwind directives</li>
+      <textarea class="form-control" name="" id="" cols="50" rows="4">
+        @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+        
+          @tailwind base;
+          @tailwind components;
+          @tailwind utilities;
+        </textarea
+      >
+      <li><kbd>npx tailwindcss -i ./input.css -o ./output.css --watch</kbd> - specify <b>input.css</b> location as input (-i) and <b>output.css</b> location as output (-o)</li>
+      <li style="color: red"><kbd style="color: red">npm init -y</kbd> - creates package.json, were in <b>"scripts"</b> you put above npx text and every time instead of hard script, you <kbd style="color: red">npm run build</kbd></li>
+      <textarea class="form-control" name="" id="" cols="50" rows="16">
+        {
+          "name": "tail-css",
+          "version": "1.0.0",
+          "description": "",
+          "main": "index.js",
+          "scripts": {
+            "build": "tailwindcss -i ./p1/input.css -o ./p1/output.css --watch"
+          },
+          "keywords": [],
+          "author": "",
+          "license": "ISC",
+          "devDependencies": {
+            "tailwindcss": "^3.1.4"
+          }
+        }
+      </textarea>
+    </ul>
+
+    <a href="https://nerdcave.com/tailwind-cheat-sheet" target="_blank"><button class="btn btn-primary">Cheat sheet</button></a>
+    <a href="https://flowbite.com/tools/tailwind-cheat-sheet/" target="_blank"><button class="btn btn-success">Cheat sheet 1</button></a>
+    <a href="https://flowbite.com/docs/components/buttons/" target="_blank"><button class="btn btn-success">Components</button></a>
+    <a href="https://tailwindcss.com/docs/installation" target="_blank"><button class="btn btn-danger">Documentation</button></a>
+    <a href="https://tailwind-converter.netlify.app/" target="_blank"><button class="btn btn-warning">Converter</button></a>
+  </body>
+</html>
