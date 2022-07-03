@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <h1><a href="https://github.com/thecodeholic/php-developer-roadmap" target="_blank">PHP Developer roadmap</a></h1>
+
+    <h2 id="table-of-contents">Table of Contents</h2>
+    <ol type="1">
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#how-internet--websites-works">How Internet &amp; Websites works</a></strong
+        ><br />
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#browserserver-request-flow-http-protocol-status-codes">Browser/Server request flow, HTTP Protocol, Status codes</a></strong
+        ><br />
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#basics-of-htmlcss">Basics of HTML/CSS</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#basics-of-javascript">Basics of Javascript</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#introduction-to-databases">Introduction to Databases</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#version-control-system-git--github">Version Control System (Git &amp; Github)</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#getting-familiar-with-php-syntax-functions-dates-json-file-system-curl-etc">Getting Familiar with PHP: Syntax, functions, dates, JSON, File System, CURL, etc…</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#understanding-composer">Understanding Composer</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#php-beginner-projects">PHP beginner projects</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#object-oriented-php">Object Oriented PHP</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#build-projects">Build Projects</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#build-custom-mvc-framework">Build custom MVC Framework</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#what-is-api">What is API</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#learn-existing-framework">Learn Existing Framework</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#learn-javascript">Learn JavaScript</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#basics-of-javascript-frameworks">Basics of JavaScript Frameworks</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#build-projects-with-existing-frameworks">Build Projects with existing frameworks</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#get-familiar-with-terminal">Get Familiar with Terminal</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#editorsides">Editors/IDEs</a></strong
+        ><br />
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#docker">Docker</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/thecodeholic/php-developer-roadmap#design-patterns">Design Patterns</a></strong>
+      </li>
+    </ol>
+    <h3 id="how-internet-websites-works">How Internet &amp; Websites works</h3>
+    <table>
+      <colgroup>
+        <col style="width: 39%" />
+        <col style="width: 7%" />
+        <col style="width: 52%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>How does the INTERNET work?</td>
+          <td>9m</td>
+          <td>https://youtu.be/x3c1ih2NJEg</td>
+        </tr>
+        <tr class="even">
+          <td>How The Web Works - The Big Picture</td>
+          <td>12m</td>
+          <td>https://youtu.be/hJHvdBlSxug</td>
+        </tr>
+        <tr class="odd">
+          <td>How does the internet work? (Full Course)</td>
+          <td>1h 42m</td>
+          <td>https://youtu.be/zN8YNNHcaZc</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="browserserver-request-flow-http-protocol-status-codes">Browser/Server request flow, HTTP Protocol, Status codes</h3>
+    <table>
+      <colgroup>
+        <col style="width: 33%" />
+        <col style="width: 8%" />
+        <col style="width: 58%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>HTTP Crash Course &amp; Exploration</td>
+          <td>38m</td>
+          <td>https://youtu.be/iYM2zFP3Zn0</td>
+        </tr>
+        <tr class="even">
+          <td>MDN HTTP Tutorial</td>
+          <td></td>
+          <td>https://developer.mozilla.org/en-US/docs/Web/HTTP</td>
+        </tr>
+        <tr class="odd">
+          <td>Wikipedia Status Codes</td>
+          <td></td>
+          <td>https://en.wikipedia.org/wiki/List_of_HTTP_status_codes</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="basics-of-htmlcss">Basics of HTML/CSS</h3>
+    <table>
+      <colgroup>
+        <col style="width: 46%" />
+        <col style="width: 7%" />
+        <col style="width: 45%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>HTML Tutorial for Beginners</td>
+          <td>1h</td>
+          <td>https://youtu.be/qz0aGYrrlhU</td>
+        </tr>
+        <tr class="even">
+          <td>HTML Crash Course For Absolute Beginners</td>
+          <td>1h</td>
+          <td>https://youtu.be/UB1O30fR-EE</td>
+        </tr>
+        <tr class="odd">
+          <td>HTML Full Course - Build a Website Tutorial</td>
+          <td>2h</td>
+          <td>https://youtu.be/pQN-pnXPaVg</td>
+        </tr>
+        <tr class="even">
+          <td>CSS Crash Course For Absolute Beginners</td>
+          <td>1h 25m</td>
+          <td>https://youtu.be/yfoY53QXEnI</td>
+        </tr>
+        <tr class="odd">
+          <td>CSS Tutorial - Zero to Hero (Complete Course)</td>
+          <td>6h 18m</td>
+          <td>https://youtu.be/1Rs2ND1ryYc</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="basics-of-javascript">Basics of JavaScript</h3>
+    <table>
+      <colgroup>
+        <col style="width: 59%" />
+        <col style="width: 8%" />
+        <col style="width: 31%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Javascript Crash Course for beginners</td>
+          <td>1h 40m</td>
+          <td>https://youtu.be/hdI2bqOjy3c</td>
+        </tr>
+        <tr class="even">
+          <td>Learn JavaScript - Full Course for Beginners</td>
+          <td>3h 26m</td>
+          <td>https://youtu.be/PkZNo7MFNFg</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="introduction-to-databases">Introduction to Databases</h3>
+    <table>
+      <colgroup>
+        <col style="width: 50%" />
+        <col style="width: 7%" />
+        <col style="width: 41%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>MySQL Tutorial for Beginners [Full Course]</td>
+          <td>3h 10m</td>
+          <td>https://youtu.be/7S_tz1z_5bA</td>
+        </tr>
+        <tr class="even">
+          <td>SQL Tutorial - Full Database Course for Beginners</td>
+          <td>4h 20m</td>
+          <td>https://youtu.be/HXV3zeQKqGY</td>
+        </tr>
+        <tr class="odd">
+          <td>PHP MySql Tutorial</td>
+          <td>article</td>
+          <td>https://www.mysqltutorial.org/php-mysql/</td>
+        </tr>
+        <tr class="even">
+          <td>PHP MySql Tutorial</td>
+          <td>article</td>
+          <td>https://www.w3schools.com/php/php_mysql_intro.asp</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="version-control-system-git-github">Version Control System (Git &amp; Github)</h3>
+    <table>
+      <colgroup>
+        <col style="width: 46%" />
+        <col style="width: 7%" />
+        <col style="width: 45%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Git &amp; Github Tutorial for Absolute Beginners</td>
+          <td>46m</td>
+          <td>https://youtu.be/iCKAWxfVWUY</td>
+        </tr>
+        <tr class="even">
+          <td>Git &amp; GitHub Crash Course For Beginners</td>
+          <td>32m</td>
+          <td>https://youtu.be/SWYqp7iY_Tc</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="getting-familiar-with-php-syntax-functions-dates-json-file-system-curl-etc">Getting Familiar with PHP: Syntax, functions, dates, JSON, File System, CURL, etc…</h3>
+    <table>
+      <colgroup>
+        <col style="width: 46%" />
+        <col style="width: 5%" />
+        <col style="width: 48%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>PHP Tutorial for Absolute Beginners - PHP Course 2021</td>
+          <td>5h 5m</td>
+          <td>https://youtu.be/yXzWfZ4N4xU</td>
+        </tr>
+        <tr class="even">
+          <td>Learn PHP The Right Way - Full PHP Tutorial For Beginners &amp; Advanced</td>
+          <td>9h 14m</td>
+          <td>https://www.youtube.com/playlist?list=PLr3d3QYzkw2xabQRUpcZ_IBk9W50M9pe-</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="understanding-composer">Understanding Composer</h3>
+    <p>This section is in under development</p>
+    <h3 id="php-beginner-projects">PHP beginner projects</h3>
+    <table>
+      <colgroup>
+        <col style="width: 50%" />
+        <col style="width: 7%" />
+        <col style="width: 41%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Simple CRUD application with PHP and JSON</td>
+          <td>1h 35m</td>
+          <td>https://youtu.be/DWHZSkn5paQ</td>
+        </tr>
+        <tr class="even">
+          <td>Todo app with PHP</td>
+          <td>30m</td>
+          <td>https://youtu.be/NxeNqHdJFxs</td>
+        </tr>
+        <tr class="odd">
+          <td>PHP Watch files and directories recursively</td>
+          <td>8m</td>
+          <td>https://youtu.be/5f4PjQJI-Fc</td>
+        </tr>
+        <tr class="even">
+          <td>Bulk image resize with PHP</td>
+          <td>8m</td>
+          <td>https://youtu.be/Z99lYtn3quk</td>
+        </tr>
+        <tr class="odd">
+          <td>PHP registration form &amp; validation</td>
+          <td>30m</td>
+          <td>https://youtu.be/V5sJ76T3mWg</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="object-oriented-php">Object Oriented PHP</h3>
+    <table>
+      <colgroup>
+        <col style="width: 14%" />
+        <col style="width: 28%" />
+        <col style="width: 57%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Channel</th>
+          <th>Resource Name</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Programming with Mosh</td>
+          <td>Object-oriented Programming in 7 minutes</td>
+          <td>https://youtu.be/pTB0EiLXUC8</td>
+        </tr>
+        <tr class="even">
+          <td>TheCodeholic</td>
+          <td>Object Oriented PHP For beginners</td>
+          <td>https://www.youtube.com/watch?v=JmDHHhxfe1w&amp;list=PLLQuc_7jk__VDhXWi544iK-SgljlGGlrX</td>
+        </tr>
+        <tr class="odd">
+          <td>Dani Krossing</td>
+          <td>Object Oriented PHP Tutorials</td>
+          <td>https://www.youtube.com/watch?v=Anz0ArcQ5kI&amp;list=PL0eyrZgxdwhypQiZnYXM7z7-OTkcMgGPh</td>
+        </tr>
+        <tr class="even">
+          <td>The Net Ninja</td>
+          <td>Object Oriented PHP Tutorial</td>
+          <td>https://www.youtube.com/watch?v=LuWxwLk8StM&amp;list=PL4cUxeGkcC9hNpT-yVAYxNWOmxjxL51Hy</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="build-projects">Build Projects</h3>
+    <table>
+      <colgroup>
+        <col style="width: 50%" />
+        <col style="width: 7%" />
+        <col style="width: 41%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Build PHP Form Widget using OOP Abstraction</td>
+          <td>19m</td>
+          <td>https://youtu.be/sBP6HKRW0sM</td>
+        </tr>
+        <tr class="even">
+          <td>Build Shopping Cart with OOP</td>
+          <td>37m</td>
+          <td>https://youtu.be/1Ip7_hdSqzY</td>
+        </tr>
+        <tr class="odd">
+          <td>Create MySql Notes App</td>
+          <td>33m</td>
+          <td>https://youtu.be/DOsuFRnBqLU</td>
+        </tr>
+        <tr class="even">
+          <td>How To Create A Login System In PHP For Beginners</td>
+          <td>1h 57m</td>
+          <td>https://youtu.be/gCo6JqGMi30</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="build-custom-mvc-framework">Build custom MVC Framework</h3>
+    <table>
+      <colgroup>
+        <col style="width: 37%" />
+        <col style="width: 5%" />
+        <col style="width: 57%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Build PHP MVC Framework</td>
+          <td>6h</td>
+          <td>https://www.youtube.com/watch?v=WKy-N0q3WRo&amp;list=PLLQuc_7jk__Uk_QnJMPndbdKECcTEwTA1</td>
+        </tr>
+        <tr class="even">
+          <td>Create your own PHP Framework</td>
+          <td>N/A</td>
+          <td>https://symfony.com/doc/current/create_framework/index.html</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="what-is-api">What is API</h3>
+    <table style="width: 100%">
+      <colgroup>
+        <col style="width: 63%" />
+        <col style="width: 7%" />
+        <col style="width: 28%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>What is an API?</td>
+          <td>0h 3m</td>
+          <td>https://youtu.be/s7wmiS2mSXY</td>
+        </tr>
+        <tr class="even">
+          <td>APIs for Beginners - How to use an API (Full Course / Tutorial)</td>
+          <td>2h 19m</td>
+          <td>https://youtu.be/GZvSYJDk-us</td>
+        </tr>
+        <tr class="odd">
+          <td>Build PHP REST API From Scratch</td>
+          <td>1h 16m</td>
+          <td>https://www.youtube.com/watch?v=OEWXbpUMODk&amp;list=PLillGF-RfqbZ3_Xr8do7Q2R752xYrDRAo</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="learn-existing-framework">Learn Existing Framework</h3>
+    <table>
+      <colgroup>
+        <col style="width: 61%" />
+        <col style="width: 8%" />
+        <col style="width: 30%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Laravel PHP Framework Tutorial - Full Course for Beginners</td>
+          <td>4h 25m</td>
+          <td>https://youtu.be/ImtZ5yENzgE</td>
+        </tr>
+        <tr class="even">
+          <td>Laravel PHP Framework Tutorial - Full Course (2020)</td>
+          <td>6h 29m</td>
+          <td>https://youtu.be/BXiHvgrJfkg</td>
+        </tr>
+        <tr class="odd">
+          <td>Yii2 PHP Framework - Full Course (Build a YouTube Clone)</td>
+          <td>7h 04m</td>
+          <td>https://youtu.be/whuIf33v2Ug</td>
+        </tr>
+        <tr class="even">
+          <td>Symfony PHP Framework Tutorial - Full Course</td>
+          <td>3h 28m</td>
+          <td>https://youtu.be/Bo0guUbL5uo</td>
+        </tr>
+        <tr class="odd">
+          <td>Yii2 Framework course playlist</td>
+          <td></td>
+          <td>https://www.youtube.com/watch?v=JD5Y-lQNrPs&amp;list=PLLQuc_7jk__V3jQ0Xr4Rho2lSDztspOt9</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="learn-javascript">Learn Javascript</h3>
+    <table>
+      <colgroup>
+        <col style="width: 61%" />
+        <col style="width: 8%" />
+        <col style="width: 30%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Object Oriented JavaScript</td>
+          <td>1h 02m</td>
+          <td>https://youtu.be/PFmuCDHHpwk</td>
+        </tr>
+        <tr class="even">
+          <td>JavaScript DOM Course</td>
+          <td>2h 0m</td>
+          <td>https://www.youtube.com/watch?v=0ik6X4DJKCc&amp;list=PLillGF-RfqbYE6Ik_EuXA2iZFcE082B3s</td>
+        </tr>
+        <tr class="odd">
+          <td>Asynchronouse JavaScript</td>
+          <td>0h 42m</td>
+          <td>https://youtu.be/_8gHHBlbziw</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="basics-of-javascript-frameworks">Basics of JavaScript Frameworks</h3>
+    <table>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Angular Crash Course</td>
+          <td>1h 24m</td>
+          <td>https://youtu.be/Fdf5aTYRW0E</td>
+        </tr>
+        <tr class="even">
+          <td>React Crash Course</td>
+          <td>1h 48m</td>
+          <td>https://youtu.be/w7ejDZ8SWv8</td>
+        </tr>
+        <tr class="odd">
+          <td>Vue Crash Course</td>
+          <td>1h 50m</td>
+          <td>https://youtu.be/qZXt1Aom3Cs</td>
+        </tr>
+        <tr class="even">
+          <td>Vue3 Crash Course</td>
+          <td>2h 57m</td>
+          <td>https://youtu.be/ZqgiuPt5QZo</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="build-projects-with-existing-frameworks">Build Projects with existing frameworks</h3>
+    <h4 id="yii2-framework">Yii2 Framework</h4>
+    <table>
+      <colgroup>
+        <col style="width: 61%" />
+        <col style="width: 8%" />
+        <col style="width: 30%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Yii2 E-commerce website - Full Working Process</td>
+          <td>16h 30m</td>
+          <td>https://youtu.be/eQdDBhQpU9o</td>
+        </tr>
+        <tr class="even">
+          <td>Build a REST API using Yii2 PHP Framework</td>
+          <td>1h 25m</td>
+          <td>https://youtu.be/XyHHMvRt6Cw</td>
+        </tr>
+        <tr class="odd">
+          <td>Vue.js &amp; Yii2 REST API notes app</td>
+          <td>2h 30m</td>
+          <td>https://youtu.be/7vrctmDQYW4</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4 id="laravel">Laravel</h4>
+    <table>
+      <colgroup>
+        <col style="width: 61%" />
+        <col style="width: 8%" />
+        <col style="width: 30%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Laravel E-Commerce</td>
+          <td>16h 30m</td>
+          <td>https://www.youtube.com/watch?v=o5PWIuDTgxg&amp;list=PLEhEHUEU3x5oPTli631ZX9cxl6cU_sDaR</td>
+        </tr>
+        <tr class="even">
+          <td>Laravel Movie App</td>
+          <td>1h 25m</td>
+          <td>https://www.youtube.com/watch?v=9OKbmMqsREc&amp;list=PLEhEHUEU3x5pYTjZze3fhYMB4Nl_WOHI4</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="get-familiar-with-terminal">Get Familiar with Terminal</h3>
+    <table>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Beginner’s Guide To The Linux Terminal</td>
+          <td>42m</td>
+          <td>https://youtu.be/s3ii48qYBxA</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="editorsides">Editors/IDEs</h3>
+    <table>
+      <colgroup>
+        <col style="width: 39%" />
+        <col style="width: 7%" />
+        <col style="width: 53%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Visual Studio Code Tutorial for Beginners</td>
+          <td>33m</td>
+          <td>https://youtu.be/VqCgcpAypFQ</td>
+        </tr>
+        <tr class="even">
+          <td>Visual Studio Code Crash Course</td>
+          <td>1h 32m</td>
+          <td>https://youtu.be/WPqXP_kLzpo</td>
+        </tr>
+        <tr class="odd">
+          <td>VS Code SuperHero course</td>
+          <td></td>
+          <td>https://vscodehero.com/</td>
+        </tr>
+        <tr class="even">
+          <td>Top 12 VScode Extensions for PHP</td>
+          <td>17m</td>
+          <td>https://youtu.be/v9dWFbiir9Q</td>
+        </tr>
+        <tr class="odd">
+          <td>Introduction to PHPStorm</td>
+          <td>6m</td>
+          <td>https://youtu.be/pP9jw3fgrCU</td>
+        </tr>
+        <tr class="even">
+          <td>PHPStorm vs VSCode for PHP Development</td>
+          <td>2h 15m</td>
+          <td>https://youtu.be/O9nIE-40uKk</td>
+        </tr>
+        <tr class="odd">
+          <td>Be Awesome in PHPStorm (Laracasts)</td>
+          <td>1h 30m</td>
+          <td>https://laracasts.com/series/how-to-be-awesome-in-phpstorm</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="docker">Docker</h3>
+    <table style="width: 100%">
+      <colgroup>
+        <col style="width: 71%" />
+        <col style="width: 5%" />
+        <col style="width: 22%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Docker Tutorial for Beginners</td>
+          <td>2h 46m</td>
+          <td>https://youtu.be/3c-iBn73dDE</td>
+        </tr>
+        <tr class="even">
+          <td>Docker Tutorial for Beginners - A Full DevOps Course on How to Run Applications in Containers</td>
+          <td>2h 10m</td>
+          <td>https://youtu.be/fqMOX6JJhGo</td>
+        </tr>
+        <tr class="odd">
+          <td>How to Create PHP Development Environments with Docker Compose</td>
+          <td>31m</td>
+          <td>https://youtu.be/l0jb-N5H52A</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="design-patterns-1">Design Patterns</h3>
+    <table>
+      <colgroup>
+        <col style="width: 57%" />
+        <col style="width: 8%" />
+        <col style="width: 33%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Design Patterns in Plain English</td>
+          <td>1h 20m</td>
+          <td>https://youtu.be/NU_1StN5Tkk</td>
+        </tr>
+        <tr class="even">
+          <td>5 Design Patterns Every Engineer Should Know</td>
+          <td>12m</td>
+          <td>https://youtu.be/FLmBqI3IKMAo</td>
+        </tr>
+        <tr class="odd">
+          <td>Design Patterns in PHP</td>
+          <td>N/A</td>
+          <td>https://designpatternsphp.readthedocs.io/en/latest/README.html</td>
+        </tr>
+        <tr class="even">
+          <td>SOLID principles</td>
+          <td>N/A</td>
+          <td>https://www.cleancode.studio/series/solid-principles</td>
+        </tr>
+        <tr class="odd">
+          <td>The No-Framework Tutorial</td>
+          <td>N/A</td>
+          <td>https://github.com/PatrickLouys/no-framework-tutorial</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="best-practices">Best Practices</h3>
+    <table>
+      <colgroup>
+        <col style="width: 57%" />
+        <col style="width: 8%" />
+        <col style="width: 33%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>PHP the Right Way</td>
+          <td>N/A</td>
+          <td>https://phptherightway.com/</td>
+        </tr>
+        <tr class="even">
+          <td>Building Secure PHP Software</td>
+          <td>N/A</td>
+          <td>https://paragonie.com/blog/2017/12/2018-guide-building-secure-php-software</td>
+        </tr>
+        <tr class="odd">
+          <td>PHP Best Practices</td>
+          <td>N/A</td>
+          <td>https://phpbestpractices.org/</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="tdd">TDD</h3>
+    <table>
+      <colgroup>
+        <col style="width: 57%" />
+        <col style="width: 8%" />
+        <col style="width: 33%" />
+      </colgroup>
+      <thead>
+        <tr class="header">
+          <th>Resource Name</th>
+          <th>Duration</th>
+          <th>Resource</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Test-Driven Laravel</td>
+          <td>1h 20m</td>
+          <td>https://www.youtube.com/watch?v=MdApmmK71WM&amp;t=2006s</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
