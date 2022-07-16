@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="../styles/drupal.ico" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <a href="https://www.drupal.org/node/2513632" target="_blank">Using attributes in templates</a> <br />
+    <a href="https://www.drupal.org/node/2640110" target="_blank">Create custom twig templates for custom module</a><br />
+
+    <a href="https://www.drupal.org/docs/develop/coding-standards/twig-coding-standards" target="_blank">Twig coding standards (drupal.org)</a><br />
+
+    თუ გსურთ რომ ქეშის გაწმენდა არ დაგჭირდეთ ტვიგთან მუშაობის დროს შეგიძლიათ development.services.yml ში დაამატოთ შემდეგი კონფიგურაცია: parameters: twig.config: debug: true auto-reload: true cache: false
+
+    <h1>twig debugging</h1>
+    <i>drupal &gt; sites &gt; default &gt; services.yml</i> set <b>debug: true </b> and clear caches (if <i>services.yml</i> does not exist, change <i>default.services.yml</i> to <i>services.yml</i>) <br />
+    <a href="https://www.drupal.org/node/1903374" target="_blank">debugging compiled Twig templates</a><br />
+    <a href="https://www.drupal.org/docs/theming-drupal/twig-in-drupal/twig-template-naming-conventions" target="_blank">twig-template-naming</a> <br />
+
+    <kbd>
+      {{ dump() }} <br />
+      {{ dump(var) }} <br />
+      {{ dump(base_path) }}
+    </kbd>
+    <hr />
+  </body>
+</html>

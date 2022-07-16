@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VS Code</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <p><strong>Genelar Setup In settings</strong></p>
+    <ul>
+      <li>Font size - 18</li>
+      <li>Tab size - 2</li>
+      <li>editor bracket pair colorization - Enable</li>
+      <li>editor guides Bracket pairs - true</li>
+      <li>editor guides Bracket pairs horizontal - true</li>
+      <li>wrap line length - 0 (to avoid line wrap)</li>
+      <li>word wrap - on</li>
+      <li>Workbench > Editor: Preview (settings) - Disable</li>
+      <li>Defaulr Formatter - Prettier (wraps lines despite "wrap line length = 0" set prettier prinwidth to 600 from settings)</li>
+      <li>Enable all Langauge validations in settings, for PHP, .exe file location must be set in settings.json - "php.validate.executablePath": "C://xampp//php//php.exe",</li>
+      <li>Settings > Keyboard shortcuts ⤑ <b>Emmet:</b> Wrap with abbreviation (User Define <kbd>shift + alt + w</kbd> )</li>
+      <li>Set User <a href="https://gpx.ge/adds/tips/pages/setup/files/snippets.txt">snippets</a></li>
+    </ul>
+    <p><strong>Tips</strong></p>
+    <ul>
+      <li>in explorer - new file - css/style.css (crates folder and file both)</li>
+      <li>open settings.json with <kbd>ctrl + P</kbd> or paste in <i>run</i> "%APPDATA%\Code\User\settings.json"</li>
+      <p><kbd>ctrl + f5</kbd> - Force Refresh css on chrome</p>
+    </ul>
+    <p><strong>Plugins</strong></p>
+
+    <ul>
+      <li>Atom One Dark Theme</li>
+      <li>live server</li>
+      <li>beautify</li>
+      <li>Gruvbox Theme</li>
+      <li>peacock</li>
+      <li>SFTP</li>
+      <li>JavaScript (ES6) code snippets</li>
+      <li>Code Runner (requires node.js)</li>
+      <li>Live Sass Compiler (requires node.js)</li>
+      <li>HTMLHint (Html Validation) <a href="https://gpx.ge/adds/tips/pages/setup/files/htmlhintrc.txt">Config file</a></li>
+      <li>auto rename tags - see instructions</li>
+      <li>scss everywhere</li>
+      <li>vscode-icons</li>
+      <li>Drupal Syntax Highlighting</li>
+      <li>Twig Language 2</li>
+      <li>HTML to CSS autocompletion (settings&gt;html-to-css-autocompletion)</li>
+      <li>Wrap Console Log - <kbd>ctrl + alt + W / Down</kbd></li>
+      <li>Chrome extention - Pesticide for Chrome, Eye Dropper, Web Developer, CSS to Tailwind</li>
+    </ul>
+    <p><strong>Shortcuts</strong></p>
+    <p><kbd>ctrl + ,</kbd> - Settings</p>
+    <p><kbd>alt + F4</kbd> - Closes vscode</p>
+    <p><kbd>ctrl + F4 / W</kbd> - Closes window</p>
+    <p><kbd>ctrl + P</kbd> open recent files quickly</p>
+    <p><kbd>ctrl k + w</kbd> close all active tabs</p>
+    <p><kbd>ctrl + B</kbd> toggle explorer</p>
+    <p><kbd>ctrl + D</kbd> select word</p>
+    <p><kbd>shift + alt + W</kbd> User Defined Wrap with abbreviation</p>
+    <p><kbd>alt + shft + arrow</kbd> copy line up or down</p>
+    <p><kbd>ctrl + tab</kbd> - Switch between opened pages</p>
+    <p><kbd>alt + ↑ / ↓</kbd></p>
+    <h3>Fold Shortcurts</h3>
+    <ul>
+      <li><kbd>Ctrl + K Ctrl + 0</kbd> - Fold All Levels</li>
+      <li><kbd>Ctrl + K Ctrl + [n]</kbd> - Fold [n] Level</li>
+      <li><kbd>Ctrl + K Ctrl + J</kbd> - Unfold All Levels</li>
+      <li><kbd>Ctrl + K Ctrl + ]</kbd> - Unfold current Level</li>
+    </ul>
+    <hr />
+    <h2>Setup SCSS</h2>
+    <ul>
+      <li>Instal node.js</li>
+      <li>instal npm from cmd - "npm install -g npm"</li>
+      <li>install sass from cmd - "npm install -g sass"</li>
+      <li>Install Vscode extention "Live Sass Compiler"</li>
+      <li>Create "style.scss"</li>
+      <li>Click the ‘watch sass’ button on the bottom right of your VSCode screen.</li>
+      <li>The compiler will automatically create two additional files in your directory. styles.css and styles.css.map</li>
+      <li>Now we are ready to start writing SCSS code in the styles.scss document which will be converted to css by live sass compiler each time we hit save.</li>
+    </ul>
+  </body>
+</html>

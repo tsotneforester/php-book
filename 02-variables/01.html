@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>02-01</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>Start with $</td>
+        <td class="comment">$name</td>
+      </tr>
+      <tr>
+        <td>Contain dashes(-)</td>
+        <td class="comment">$my-name</td>
+      </tr>
+      <tr>
+        <td>underscore(_)</td>
+        <td class="comment">$my_name</td>
+      </tr>
+      <tr>
+        <td>letters(a,b,…A,B,)</td>
+        <td class="comment">$myName</td>
+      </tr>
+      <tr>
+        <td>numbers (1,2, …..)</td>
+        <td class="comment">$name12</td>
+      </tr>
+      <tr>
+        <td>Case Sensitive</td>
+        <td><span class="comment">$name</span> is not <span class="comment">$Name</span></td>
+      </tr>
+      <tr>
+        <td>No Space</td>
+        <td class="red">$nam e</td>
+      </tr>
+      <tr>
+        <td>Can't start with numbers</td>
+        <td class="red">$13name</td>
+      </tr>
+      <tr>
+        <td>Bad practice</td>
+        <td class="red">$-name / $_name</td>
+      </tr>
+      <tr>
+        <td>php phrase</td>
+        <td class="red">$this</td>
+      </tr>
+    </table>
+  </body>
+</html>

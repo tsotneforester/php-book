@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Delete Object</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <code
+      ><span style="color: #000000">
+        <span style="color: #0000bb">&lt;?php<br /><br /><br /></span><span style="color: #007700">class&nbsp;</span><span style="color: #0000bb">Pirovneba&nbsp;</span><span style="color: #007700">{<br /></span><span style="color: #ff8000">//properties<br />&nbsp;&nbsp;</span><span style="color: #007700">public&nbsp;</span><span style="color: #0000bb">$fname</span><span style="color: #007700">;<br />&nbsp;&nbsp;public&nbsp;</span><span style="color: #0000bb">$lname</span><span style="color: #007700">;<br /></span><span style="color: #ff8000">//methods<br />&nbsp;&nbsp;</span><span style="color: #007700">function&nbsp;</span><span style="color: #0000bb">setName</span><span style="color: #007700">(</span><span style="color: #0000bb">$name</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000bb">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000bb">fname&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000bb">$name</span><span style="color: #007700">;<br />&nbsp;&nbsp;}<br />&nbsp;&nbsp;function&nbsp;</span><span style="color: #0000bb">getName</span
+        ><span style="color: #007700">()&nbsp;{<br />&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000bb">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000bb">fname</span><span style="color: #007700">;<br />&nbsp;&nbsp;}<br />};<br /><br /><br /></span><span style="color: #0000bb">$myself&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000bb">Pirovneba</span><span style="color: #007700">(</span><span style="color: #dd0000">""</span><span style="color: #007700">);<br /><br /></span><span style="color: #0000bb">$myself</span><span style="color: #007700">-&gt;</span><span style="color: #0000bb">setName</span><span style="color: #007700">(</span><span style="color: #dd0000">"tsotne"</span><span style="color: #007700">);<br />echo&nbsp;</span><span style="color: #0000bb">$myself</span><span style="color: #007700">-&gt;</span><span style="color: #0000bb">getName</span><span style="color: #007700">();&nbsp;</span><span style="color: #ff8000">//tsotne<br /><br /></span><span style="color: #007700">unset(</span><span style="color: #0000bb">$myself</span><span style="color: #007700">);&nbsp;</span
+        ><span style="color: #ff8000">//unsets&nbsp;object<br /></span><span style="color: #0000bb">$myself</span><span style="color: #007700">-&gt;</span><span style="color: #0000bb">setName</span><span style="color: #007700">(</span><span style="color: #dd0000">"Zorg"</span><span style="color: #007700">);<br />echo&nbsp;</span><span style="color: #0000bb">$myself</span><span style="color: #007700">-&gt;</span><span style="color: #0000bb">getName</span><span style="color: #007700">();&nbsp;</span><span style="color: #ff8000">//error:&nbsp;undefined&nbsp;variable<br /><br /><br /></span><span style="color: #0000bb">?&gt;</span>
+      </span>
+    </code>
+  </body>
+</html>

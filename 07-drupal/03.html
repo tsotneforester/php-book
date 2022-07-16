@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="../styles/drupal.ico" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <h1>Dripal Modules</h1>
+    <ul>
+      <li>Create <b>NewModule</b> folder in <i>drupal > modules > custom </i></li>
+      <li>
+        Create <b><a href="https://www.drupal.org/docs/creating-modules/let-drupal-know-about-your-module-with-an-infoyml-file" target="_blank">NewModule.info.yml</a></b> file
+      </li>
+      <textarea name="" id="" cols="36" rows="6">
+        name: "Module Hero"
+        description: "We are making drpal 9 Module"
+        type: module
+        package: Custom
+        version: 1.0
+        core_version_requirement: ^8 || ^9
+      </textarea>
+      <li>Now it can be found in Drupal Extends, Install it</li>
+      <li>Create <b>src</b> folder in <b>NewModule</b> folder to create controller php file</li>
+      <li>
+        Create <a href="https://www.drupal.org/docs/creating-custom-modules/step-by-step-tutorial-hello-world/add-a-routing-file" target="_blank"><b>NewModule.routing.yml</b></a> in <b>NewModule</b> folder
+      </li>
+      <textarea name="" id="" cols="30" rows="10">
+        module_hero.herolist:
+        path: '/herolist'
+        defaults:
+          _controller: '\Drupal\module_hero\Controller\HeroController::heroList'
+          _title: 'Our super heroes list'
+        requirements:
+          _permission: 'access content'
+      </textarea>
+      <li>now on drupalproject/herolist you can see content from controller</li>
+      <li><kbd>use Drupal\Core\Controller\ControllerBase;</kbd> - if you add this class to your controller, it will have some <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Controller%21ControllerBase.php/class/ControllerBase/8.5.x" target="_blank">usefull methods</a></li>
+      <li>Create <b>NewModule.module</b> file to <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_theme/9.3.x" target="_blank">hook theme</a> instead of hook you should use module name</li>
+      <li>Then you create temlate folder with twig file in it</li>
+      <li>Simplify controller.php to do end with same result</li>
+      <li>Twig Language 2 - VS Code Extension for .twig file sintax vizualization</li>
+      <li>Drupal Syntax Highlighting - VS Code Extension for .module file sintax vizualization</li>
+    </ul>
+  </body>
+</html>

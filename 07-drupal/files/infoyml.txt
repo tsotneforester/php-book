@@ -1,0 +1,24 @@
+name: My Greate Theme # required
+type: theme # required
+core_version_requirement: ^8 || ^9 # required
+base theme: classy # required
+description: This is my first theme project
+screenshot: main.png
+logo: cumin.png
+
+regions:
+  header: satauri #in drupal block structure will appear "satauri" (page.header)
+  mythememenu: Navigation
+  content: masala
+  footer: daxmareba
+  page_top: zeda #hidden region, must be included
+  page_bottom: kveda #hidden region, must be included
+
+libraries:
+  - mytheme/global-css # this is container which is built in libraries.yml file
+
+
+
+#libraries-extend:
+#libraries-override:
+#libraries-remove:

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>01-01</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Function</th>
+        <th>Description</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td><span class="red">fopen()</span></td>
+        <td>The first parameter of <span class="red">fopen()</span> contains the name of the file to be opened and the second parameter specifies in which mode the file should be opened. </td>
+        <td>
+          <code
+            ><span style="color: #000000">
+              <span style="color: #0000bb">$myfile </span><span style="color: #007700">= </span><span style="color: #0000bb">fopen</span><span style="color: #007700">(</span><span style="color: #dd0000">"webdictionary.txt"</span><span style="color: #007700">, </span><span style="color: #dd0000">"r"</span><span style="color: #007700">)<br /></span>
+            </span>
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="red">fread()</span></td>
+        <td>The first parameter of <span class="red">fread()</span> contains the name of the file to read from and the second parameter specifies the maximum number of bytes to read.</td>
+        <td>
+          <code
+            ><span style="color: #000000">
+              <span style="color: #0000bb">fread</span><span style="color: #007700">(</span><span style="color: #0000bb">$myfile</span><span style="color: #007700">,</span><span style="color: #0000bb">filesize</span><span style="color: #007700">(</span><span style="color: #dd0000">"webdictionary.txt"</span><span style="color: #007700">));<br /></span>
+            </span>
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="red">fclose()</span></td>
+        <td>The <span class="red">fclose()</span> requires the name of the file (or a variable that holds the filename) we want to close</td>
+        <td>
+          <code
+            ><span style="color: #000000">
+              <span style="color: #0000bb">fclose</span><span style="color: #007700">(</span><span style="color: #0000bb">$myfile</span><span style="color: #007700">);<br /></span>
+            </span>
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="red">fgets()</span></td>
+        <td>The <span class="red">fgets()</span> function is used to read a single line from a file. the file pointer moves to the next line.</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="red">feof()</span></td>
+        <td>function is useful for looping through data of unknown length.</td>
+        <td>
+          <code
+            ><span style="color: #000000">
+              <span style="color: #007700">while (!</span><span style="color: #0000bb">feof</span><span style="color: #007700">(</span><span style="color: #0000bb">$myfile</span><span style="color: #007700">)) { echo </span><span style="color: #0000bb">fgets</span><span style="color: #007700">(</span><span style="color: #0000bb">$myfile</span><span style="color: #007700">) . </span><span style="color: #dd0000">"&lt;br&gt;"</span><span style="color: #007700">;}<br /></span>
+            </span>
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="red">fgetc()</span></td>
+        <td>The <span class="red">fgetc()</span> function is used to read a single character from a file.</td>
+        <td>
+          <code
+            ><span style="color: #000000">
+              <span style="color: #007700">while (!</span><span style="color: #0000bb">feof</span><span style="color: #007700">(</span><span style="color: #0000bb">$myfile</span><span style="color: #007700">)) { echo </span><span style="color: #0000bb">fgetc</span><span style="color: #007700">(</span><span style="color: #0000bb">$myfile</span><span style="color: #007700">) . </span><span style="color: #dd0000">"&lt;br&gt;"</span><span style="color: #007700">;}<br /></span>
+            </span>
+          </code>
+        </td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <th>Modes</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>r</td>
+        <td><b>Open a file for read only</b>. File pointer starts at the beginning of the file</td>
+      </tr>
+      <tr>
+        <td>w</td>
+        <td><b>Open a file for write only</b>. Erases the contents of the file or creates a new file if it doesn't exist. File pointer starts at the beginning of the file</td>
+      </tr>
+      <tr>
+        <td>a</td>
+        <td><b>Open a file for write only</b>. The existing data in file is preserved. File pointer starts at the end of the file. Creates a new file if the file doesn't exist</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td><b>Creates a new file for write only</b>. Returns FALSE and an error if file already exists</td>
+      </tr>
+      <tr>
+        <td>r+</td>
+        <td><b>Open a file for read/write</b>. File pointer starts at the beginning of the file</td>
+      </tr>
+      <tr>
+        <td>w+</td>
+        <td><b>Open a file for read/write</b>. Erases the contents of the file or creates a new file if it doesn't exist. File pointer starts at the beginning of the file</td>
+      </tr>
+      <tr>
+        <td>a+</td>
+        <td><b>Open a file for read/write</b>. The existing data in file is preserved. File pointer starts at the end of the file. Creates a new file if the file doesn't exist</td>
+      </tr>
+      <tr>
+        <td>x+</td>
+        <td><b>Creates a new file for read/write</b>. Returns FALSE and an error if file already exists</td>
+      </tr>
+    </table>
+    <hr />
+    <p>Create text file "webdictionary.txt" , with :</p>
+    <pre>
+      AJAX
+      CSS
+      HTML
+    </pre>
+
+    <code
+      ><span style="color: #000000">
+        <span style="color: #0000bb">$myfile </span><span style="color: #007700">= </span><span style="color: #0000bb">fopen</span><span style="color: #007700">(</span><span style="color: #dd0000">"webdictionary.txt"</span><span style="color: #007700">, </span><span style="color: #dd0000">"r"</span><span style="color: #007700">) or die(</span><span style="color: #dd0000">"Unable to open file!"</span><span style="color: #007700">);<br />echo </span><span style="color: #0000bb">fread</span><span style="color: #007700">(</span><span style="color: #0000bb">$myfile</span><span style="color: #007700">,</span><span style="color: #0000bb">filesize</span><span style="color: #007700">(</span><span style="color: #dd0000">"webdictionary.txt"</span><span style="color: #007700">));<br /></span><span style="color: #0000bb">fclose</span><span style="color: #007700">(</span><span style="color: #0000bb">$myfile</span><span style="color: #007700">); </span><span style="color: #ff8000">//AJAXCSSHTML<br /></span>
+      </span>
+    </code>
+    <hr />
+    <code
+      ><span style="color: #000000">
+        <span style="color: #0000bb">$myfile </span><span style="color: #007700">= </span><span style="color: #0000bb">fopen</span><span style="color: #007700">(</span><span style="color: #dd0000">"webdictionary.txt"</span><span style="color: #007700">, </span><span style="color: #dd0000">"r"</span><span style="color: #007700">) or die(</span><span style="color: #dd0000">"Unable to open file!"</span><span style="color: #007700">);<br />echo </span><span style="color: #0000bb">fgets</span><span style="color: #007700">(</span><span style="color: #0000bb">$myfile</span><span style="color: #007700">);<br /></span><span style="color: #0000bb">fclose</span><span style="color: #007700">(</span><span style="color: #0000bb">$myfile</span><span style="color: #007700">);</span><span style="color: #ff8000">//AJAX<br /></span>
+      </span>
+    </code>
+    <hr />
+    <code
+      ><span style="color: #000000">
+        <span style="color: #0000bb">$myfile </span><span style="color: #007700">= </span><span style="color: #0000bb">fopen</span><span style="color: #007700">(</span><span style="color: #dd0000">"webdictionary.txt"</span><span style="color: #007700">, </span><span style="color: #dd0000">"r"</span><span style="color: #007700">) or die(</span><span style="color: #dd0000">"Unable to open file!"</span><span style="color: #007700">);<br /></span><span style="color: #ff8000">// Output one line until end-of-file<br /></span><span style="color: #007700">while(!</span><span style="color: #0000bb">feof</span><span style="color: #007700">(</span><span style="color: #0000bb">$myfile</span
+        ><span style="color: #007700"
+          >)) {<br />
+          echo </span
+        ><span style="color: #0000bb">fgets</span><span style="color: #007700">(</span><span style="color: #0000bb">$myfile</span><span style="color: #007700">) . </span><span style="color: #dd0000">"&lt;br&gt;"</span><span style="color: #007700">;<br />}<br /></span><span style="color: #0000bb">fclose</span><span style="color: #007700">(</span><span style="color: #0000bb">$myfile</span><span style="color: #007700">);<br /></span><span style="color: #ff8000">//AJAX<br />//CSS <br />//HTML<br /></span>
+      </span>
+    </code>
+  </body>
+</html>

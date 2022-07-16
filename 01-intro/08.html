@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>01-01</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Operator Type</th>
+        <th>Operator</th>
+        <th>Name</th>
+        <th>Example</th>
+        <th>Result</th>
+      </tr>
+      <tr>
+        <td rowspan="6">Arithmetic</td>
+        <td>+</td>
+        <td>Addition</td>
+        <td>$x + $y</td>
+        <td>Sum of $x and $y</td>
+      </tr>
+      <tr>
+        <td>-</td>
+        <td>Subtraction</td>
+        <td>$x - $y</td>
+        <td>Difference of $x and $y</td>
+      </tr>
+      <tr>
+        <td>*</td>
+        <td>Multiplication</td>
+        <td>$x * $y</td>
+        <td>Product of $x and $y</td>
+      </tr>
+      <tr>
+        <td>/</td>
+        <td>Division</td>
+        <td>$x / $y</td>
+        <td>Quotient of $x and $y</td>
+      </tr>
+      <tr>
+        <td>%</td>
+        <td>Modulus</td>
+        <td>$x % $y</td>
+        <td>Remainder of $x divided by $y</td>
+      </tr>
+      <tr>
+        <td>**</td>
+        <td>Exponentiation</td>
+        <td>$x ** $y</td>
+        <td>Result of raising $x to the $y'th power</td>
+      </tr>
+      <tr>
+        <td rowspan="6">Assignment</td>
+        <td>x = y</td>
+        <td></td>
+        <td>x = y</td>
+        <td>The left operand gets set to the value of the expression on the right</td>
+      </tr>
+      <tr>
+        <td>x += y</td>
+        <td></td>
+        <td>x = x + y</td>
+        <td>Addition</td>
+      </tr>
+      <tr>
+        <td>x -= y</td>
+        <td></td>
+        <td>x = x - y</td>
+        <td>Subtraction</td>
+      </tr>
+      <tr>
+        <td>x *= y</td>
+        <td></td>
+        <td>x = x * y</td>
+        <td>Multiplication</td>
+      </tr>
+      <tr>
+        <td>x /= y</td>
+        <td></td>
+        <td>x = x / y</td>
+        <td>Division</td>
+      </tr>
+      <tr>
+        <td>x %= y</td>
+        <td></td>
+        <td>x = x % y</td>
+        <td>Modulus</td>
+      </tr>
+      <tr>
+        <td rowspan="2">String</td>
+        <td>.</td>
+        <td>Concatenation</td>
+        <td>$txt1 . $txt2</td>
+        <td>Concatenation of $txt1 and $txt2</td>
+      </tr>
+      <tr>
+        <td>.=</td>
+        <td>Concatenation assignment</td>
+        <td>$txt1 .= $txt2</td>
+        <td>Appends $txt2 to $txt1</td>
+      </tr>
+      <tr>
+        <td rowspan="10">Comparison</td>
+        <td>==</td>
+        <td>Equal</td>
+        <td>$x == $y</td>
+        <td>Returns true if $x is equal to $y</td>
+      </tr>
+      <tr>
+        <td>===</td>
+        <td>Identical</td>
+        <td>$x === $y</td>
+        <td>Returns true if $x is equal to $y, and they are of the same type</td>
+      </tr>
+      <tr>
+        <td>!=</td>
+        <td>Not equal</td>
+        <td>$x != $y</td>
+        <td>Returns true if $x is not equal to $y</td>
+      </tr>
+      <tr>
+        <td>&lt;&gt;</td>
+        <td>Not equal</td>
+        <td>$x &lt;&gt; $y</td>
+        <td>Returns true if $x is not equal to $y</td>
+      </tr>
+      <tr>
+        <td>!==</td>
+        <td>Not identical</td>
+        <td>$x !== $y</td>
+        <td>Returns true if $x is not equal to $y, or they are not of the same type</td>
+      </tr>
+      <tr>
+        <td>&gt;</td>
+        <td>Greater than</td>
+        <td>$x &gt; $y</td>
+        <td>Returns true if $x is greater than $y</td>
+      </tr>
+      <tr>
+        <td>&lt;</td>
+        <td>Less than</td>
+        <td>$x &lt; $y</td>
+        <td>Returns true if $x is less than $y</td>
+      </tr>
+      <tr>
+        <td>&gt;=</td>
+        <td>Greater than or equal to</td>
+        <td>$x &gt;= $y</td>
+        <td>Returns true if $x is greater than or equal to $y</td>
+      </tr>
+      <tr>
+        <td>&lt;=</td>
+        <td>Less than or equal to</td>
+        <td>$x &lt;= $y</td>
+        <td>Returns true if $x is less than or equal to $y</td>
+      </tr>
+      <tr>
+        <td>&lt;=&gt;</td>
+        <td>Spaceship</td>
+        <td>$x &lt;=&gt; $y</td>
+        <td>Returns an integer less than, equal to, or greater than zero, depending on if $x is less than, equal to, or greater than $y. Introduced in PHP 7.</td>
+      </tr>
+      <tr>
+        <td>Error</td>
+        <td>@</td>
+        <td></td>
+        <td></td>
+        <td>I won't recommend to use it</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Conditional Assignment</td>
+        <td>?:</td>
+        <td>Ternary</td>
+        <td>$x = expr1 ? expr2 : expr3</td>
+        <td>Returns the value of $x. The value of $x is expr2 if expr1 = TRUE. The value of $x is expr3 if expr1 = FALSE</td>
+      </tr>
+      <tr>
+        <td>??</td>
+        <td>Null coalescing</td>
+        <td>$x = expr1 ?? expr2</td>
+        <td>Returns the value of $x. The value of $x is expr1 if expr1 exists, and is not NULL. If expr1 does not exist, or is NULL, the value of $x is expr2.Introduced in PHP 7</td>
+      </tr>
+      <tr>
+        <td rowspan="4">Increment / Decrement</td>
+        <td>++$x</td>
+        <td>Pre-increment</td>
+        <td>Increment Operators only work for strings and numbers</td>
+        <td>Increments $x by one, then returns $x</td>
+      </tr>
+      <tr>
+        <td>$x++</td>
+        <td>Post-increment</td>
+        <td>Increment Operators only work for strings and numbers</td>
+        <td>Returns $x, then increments $x by one</td>
+      </tr>
+      <tr>
+        <td>--$x</td>
+        <td>Pre-decrement</td>
+        <td>Increment Operators only work for strings and numbers</td>
+        <td>Decrements $x by one, then returns $x</td>
+      </tr>
+      <tr>
+        <td>$x--</td>
+        <td>Post-decrement</td>
+        <td>Increment Operators only work for strings and numbers</td>
+        <td>Returns $x, then decrements $x by one</td>
+      </tr>
+      <tr>
+        <td rowspan="6">Logical</td>
+        <td>and</td>
+        <td>And</td>
+        <td>$x and $y</td>
+        <td>True if both $x and $y are true</td>
+      </tr>
+      <tr>
+        <td>or</td>
+        <td>Or</td>
+        <td>$x or $y</td>
+        <td>True if either $x or $y is true</td>
+      </tr>
+      <tr>
+        <td>xor</td>
+        <td>Xor</td>
+        <td>$x xor $y</td>
+        <td>True if either $x or $y is true, but not both</td>
+      </tr>
+      <tr>
+        <td>&&</td>
+        <td>And</td>
+        <td>$x && $y</td>
+        <td>True if both $x and $y are true</td>
+      </tr>
+      <tr>
+        <td>||</td>
+        <td>Or</td>
+        <td>$x || $y</td>
+        <td>True if either $x or $y is true</td>
+      </tr>
+      <tr>
+        <td>!</td>
+        <td>Not</td>
+        <td>!$x</td>
+        <td>True if $x is not true</td>
+      </tr>
+      <tr>
+        <td rowspan="6">Array</td>
+        <td>+</td>
+        <td>Union</td>
+        <td>$x + $y</td>
+        <td>Union of $x and $y</td>
+      </tr>
+      <tr>
+        <td>==</td>
+        <td>Equality</td>
+        <td>$x == $y</td>
+        <td>Returns true if $x and $y have the same key/value pairs</td>
+      </tr>
+      <tr>
+        <td>===</td>
+        <td>Identity</td>
+        <td>$x === $y</td>
+        <td>Returns true if $x and $y have the same key/value pairs in the same order and of the same types</td>
+      </tr>
+      <tr>
+        <td>!=</td>
+        <td>Inequality</td>
+        <td>$x != $y</td>
+        <td>Returns true if $x is not equal to $y</td>
+      </tr>
+      <tr>
+        <td>&lt;&gt;</td>
+        <td>Inequality</td>
+        <td>$x &lt;&gt; $y</td>
+        <td>Returns true if $x is not equal to $y</td>
+      </tr>
+      <tr>
+        <td>!==</td>
+        <td>Non-identity</td>
+        <td>$x !== $y</td>
+        <td>Returns true if $x is not identical to $y</td>
+      </tr>
+    </table>
+  </body>
+</html>

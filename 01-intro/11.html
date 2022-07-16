@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Namespace</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <h1><a href="index.html">Namespaces</a></h1>
+    <p>As there can not be samenamed files in one folder, there can not be same <i>Constants</i>, <i>Functions</i> and <i>Classes</i> in PHP. If you declare <span class="purple">class</span> <span class="brown">DateTime</span>, which is built-in class in PHP, you will get error, because the name is already in use.</p>
+    <p>to fix this problem, you must use <b>namespace</b>, which is like virtual folder, where you put class. Start file with <b>namespace</b>, nothing before but declare statement is exaptible,</p>
+
+    <div class="code">
+      <code
+        ><span style="color: #000000">
+          <span style="color: #007700">namespace </span><span style="color: #0000bb">App<span style="color: #007700">;</span></span>
+        </span>
+      </code>
+    </div>
+    <p>To use namespaced class in another php file, you must include that file and provide namespace before class</p>
+    <div class="code">
+      <code
+        ><span style="color: #000000">
+          <span style="color: #ff8000">//-----------item.php------------------<br /></span><span style="color: #007700">namespace </span><span style="color: #0000bb">App</span> <span style="color: #007700">;<br />class </span><span style="color: #0000bb">item </span><span style="color: #007700">{<br />};<br /></span><span style="color: #ff8000">//-----------example.php------------------<br /></span><span style="color: #007700">require </span><span style="color: #dd0000">'item.php'<br /></span><span style="color: #0000bb">$obj </span><span style="color: #007700">= new </span><span style="color: #0000bb">Item</span><span style="color: #007700">; </span><span style="color: #ff8000">//will result in error, because namespace is not included<br /></span><span style="color: #0000bb">$obj </span><span style="color: #007700">= new </span><span style="color: #0000bb">App</span><span style="color: #007700">\</span><span style="color: #0000bb">Item</span><span style="color: #007700">; </span><span style="color: #ff8000">//this will work</span>
+        </span>
+      </code>
+    </div>
+
+    <p>You can use subnamespaces</p>
+    <div class="code">
+      <code
+        ><span style="color: #000000">
+          <span style="color: #0000bb">&lt;?php<br /></span><span style="color: #ff8000">//-----------item.php------------------<br /></span><span style="color: #007700">namespace </span><span style="color: #0000bb">App</span><span style="color: #007700">\</span><span style="color: #0000bb">Models</span><span style="color: #007700">;<br />class </span><span style="color: #0000bb">item </span><span style="color: #007700">{<br />};<br /></span><span style="color: #ff8000">//-----------example.php------------------<br /></span><span style="color: #007700">require </span><span style="color: #dd0000">'item.php'<br /></span><span style="color: #0000bb">$obj </span><span style="color: #007700">= new </span><span style="color: #0000bb">Item</span><span style="color: #007700">; </span><span style="color: #ff8000">//will result in error, because namespace is not included<br /></span><span style="color: #0000bb">$obj </span><span style="color: #007700">= new </span><span style="color: #0000bb">App</span><span style="color: #007700">\</span><span style="color: #0000bb">Models</span><span style="color: #007700">\</span><span style="color: #0000bb">Item</span
+          ><span style="color: #007700">; </span><span style="color: #ff8000">//this will work</span>
+        </span>
+      </code>
+    </div>
+    <p>You can so to say "shortcut" namespaces with <kbd>use</kbd>, but syntax differs for <i>Constants</i>, <i>Functions</i> and <i>Classes</i></p>
+    <div class="code">
+      <code
+        ><span style="color: #000000">
+          <span style="color: #ff8000">//-----------item.php------------------<br /></span><span style="color: #007700">namespace </span><span style="color: #0000bb">App</span><span style="color: #007700">\</span><span style="color: #0000bb">Utils</span><span style="color: #007700">;<br />class </span><span style="color: #0000bb">item </span><span style="color: #007700">{};</span><span style="color: #007700"><br />const </span><span style="color: #0000bb">MAX </span><span style="color: #007700">= </span><span style="color: #0000bb">100</span><span style="color: #007700">;<br />function </span><span style="color: #0000bb">sayHello</span><span style="color: #007700">() {<br />echo </span><span style="color: #dd0000">"Hello"</span><span style="color: #007700">;<br />}<br /></span><span style="color: #ff8000">//-----------example.php---------------<br /></span><span style="color: #007700">require </span><span style="color: #dd0000">'item.php'</span><span style="color: #007700">;<br />use </span><span style="color: #0000bb">App</span><span style="color: #007700">\</span><span style="color: #0000bb">Utils</span><span style="color: #007700">\</span><span style="color: #0000bb">item</span
+          ><span style="color: #007700">;<br />use const </span><span style="color: #0000bb">App</span><span style="color: #007700">\</span><span style="color: #0000bb">Utils</span><span style="color: #007700">\</span><span style="color: #0000bb">MAX</span><span style="color: #007700">;<br />use function </span><span style="color: #0000bb">app</span><span style="color: #007700">\</span><span style="color: #0000bb">Utils</span><span style="color: #007700">\</span><span style="color: #0000bb">sayHello</span><span style="color: #007700">; <br /></span><span style="color: #0000bb">$obj </span><span style="color: #007700">= new </span><span style="color: #0000bb">Item</span><span style="color: #007700">; <br />echo </span><span style="color: #0000bb">MAX</span><span style="color: #007700">;</span><span style="color: #ff8000">//100<br /></span><span style="color: #0000bb">sayHello</span><span style="color: #007700">();</span><span style="color: #ff8000">//Hello<br /></span>
+        </span>
+      </code>
+    </div>
+    (<a href="files/use.zip" download>project files</a>)
+    <p>As we mentioned php has built-in <span class="purple">class</span> <span class="brown">DateTime</span>. If we create custom <span class="purple">class</span> <span class="brown">DateTime</span> with namespace but still want to use built-in one, we implement <kbd>use ... as</kbd> syntax</p>
+    <div class="code">
+      <code
+        ><span style="color: #000000">
+          <span style="color: #0000bb">&lt;?php<br /></span><span style="color: #ff8000">//-----------DateTime.php------------------<br /></span><span style="color: #007700">namespace </span><span style="color: #0000bb">App</span><span style="color: #007700">;<br />class </span><span style="color: #0000bb">DateTime </span><span style="color: #007700">{<br />public </span><span style="color: #0000bb">$name </span><span style="color: #007700">= </span><span style="color: #dd0000">"Hello"</span><span style="color: #007700">;<br />};<br /></span><span style="color: #ff8000">//-----------example.php------------------<br /></span><span style="color: #007700">require </span><span style="color: #dd0000">'DateTime.php'</span><span style="color: #007700">;<br />use </span><span style="color: #0000bb">App</span><span style="color: #007700">\</span><span style="color: #0000bb">DateTime </span><span style="color: #007700">as </span><span style="color: #0000bb">Mydatetime</span><span style="color: #007700">;<br /></span><span style="color: #0000bb">$obj1 </span><span style="color: #007700">= new </span><span style="color: #0000bb">DateTime</span><span style="color: #007700">; </span
+          ><span style="color: #ff8000">//will run builtin DateTime class<br /></span><span style="color: #0000bb">$obj2 </span><span style="color: #007700">= new </span><span style="color: #0000bb">Mydatetime</span><span style="color: #007700">; </span><span style="color: #ff8000">//will run custom DateTime class<br /></span><span style="color: #0000bb">print_r</span><span style="color: #007700">(</span><span style="color: #0000bb">$obj1</span><span style="color: #007700">);</span><span style="color: #ff8000">//DateTime Object ( [date] =&gt; 2022-07-08 15:16:44.759547 [timezone_type] =&gt; 3 [timezone] =&gt; Europe/Berlin )<br /></span><span style="color: #0000bb">print_r</span><span style="color: #007700">(</span><span style="color: #0000bb">$obj2</span><span style="color: #007700">);</span><span style="color: #ff8000">//App\DateTime Object ( [name] =&gt; Hello )</span>
+        </span>
+      </code>
+    </div>
+    (<a href="files/as.zip" download>project files</a>)
+
+    <p>if you namespace php file and use inside class global (built-in) namespace, it is no more global and won't work, to fix it, you can write backslash (\) to it or use <kbd>use</kbd> syntax</p>
+    <div class="code">
+      <code
+        ><span style="color: #000000">
+          <span style="color: #ff8000">//-----------DateCalc.php------------------<br /></span><span style="color: #007700">namespace </span><span style="color: #0000bb">App</span><span style="color: #007700">;<br /></span><span style="color: #ff8000">//use DateTime;<br /></span><span style="color: #007700">class </span><span style="color: #0000bb">DateCalc </span><span style="color: #007700">{<br />public function </span><span style="color: #0000bb">getToday</span><span style="color: #007700">() {<br /></span><span style="color: #0000bb">$dt </span><span style="color: #007700">= new </span><span style="color: #0000bb">DateTime</span><span style="color: #007700">;<br /></span><span style="color: #ff8000">//$dt = new \DateTime;<br /></span><span style="color: #007700">return </span><span style="color: #0000bb">$dt</span><span style="color: #007700">-&gt;</span><span style="color: #0000bb">format</span><span style="color: #007700">(</span><span style="color: #dd0000">'l'</span><span style="color: #007700">);<br />}<br />};<br /></span><span style="color: #ff8000">//-----------example.php------------------<br /></span><span style="color: #007700">require </span
+          ><span style="color: #dd0000">'DateCalc.php'</span><span style="color: #007700">;<br /></span><span style="color: #0000bb">$calc </span><span style="color: #007700">= new </span><span style="color: #0000bb">App</span><span style="color: #007700">\</span><span style="color: #0000bb">DateCalc</span><span style="color: #007700">;<br />echo </span><span style="color: #0000bb">$calc</span><span style="color: #007700">-&gt;</span><span style="color: #0000bb">getToday</span><span style="color: #007700">();</span>
+        </span>
+      </code>
+    </div>
+    (<a href="files/use.zip" download>project files</a>)
+    <p>You can combine several use cases in single line, but according to psr-2 standarts, we don't do it</p>
+    <div class="code">
+      <code
+        ><span style="color: #000000">
+          <span style="color: #007700">use </span><span style="color: #0000bb">DateTime</span><span style="color: #007700">, </span><span style="color: #0000bb">DateInterval</span><span style="color: #007700">, </span><span style="color: #0000bb">DateTimeZone </span><span style="color: #007700">as </span><span style="color: #0000bb">Timezone</span><span style="color: #007700">;<br />use </span><span style="color: #0000bb">symphony</span><span style="color: #007700">\</span><span style="color: #0000bb">Component</span><span style="color: #007700">\</span><span style="color: #0000bb">HttpFoundation</span><span style="color: #007700">\{</span><span style="color: #0000bb">Request</span><span style="color: #007700">, </span><span style="color: #0000bb">Response</span><span style="color: #007700">};</span>
+        </span>
+      </code>
+    </div>
+    <h1>autoload classes</h1>
+
+    <p>Instead of <kbd>require</kbd> statement, you can autoload classes, it is important when using this method, that you name class and php file equally or with logical pattern</p>
+
+    <div class="code">
+      <code
+        ><span style="color: #000000">
+          <span style="color: #0000bb">&lt;?php<br /></span><span style="color: #ff8000">//-----------Product.php------------------<br /></span><span style="color: #007700">class </span><span style="color: #0000bb">Product </span><span style="color: #007700">{<br />};<br /></span><span style="color: #ff8000">//-----------example.php------------------<br /></span><span style="color: #0000bb">spl_autoload_register</span><span style="color: #007700">(function(</span><span style="color: #0000bb">$class</span><span style="color: #007700">) {<br />require </span><span style="color: #dd0000">"</span><span style="color: #0000bb">$class</span><span style="color: #dd0000">.php"</span><span style="color: #007700">;<br />});<br /></span><span style="color: #0000bb">$product </span><span style="color: #007700">= new </span><span style="color: #0000bb">Product</span><span style="color: #007700">;<br /></span><span style="color: #0000bb">$region </span><span style="color: #007700">= new </span><span style="color: #0000bb">Product</span><span style="color: #007700">;<br /></span><span style="color: #0000bb">var_dump</span><span style="color: #007700">(</span
+          ><span style="color: #0000bb">$product</span><span style="color: #007700">); </span><span style="color: #ff8000">//object(Product)#2 (0) { }<br /></span><span style="color: #0000bb">var_dump</span><span style="color: #007700">(</span><span style="color: #0000bb">$region</span><span style="color: #007700">); </span><span style="color: #ff8000">//object(Product)#3 (0) { }</span>
+        </span>
+      </code>
+    </div>
+    (<a href="files/autoloader.zip" download>project files</a> )
+    <h1>autoload namespaced classes</h1>
+
+    <p>if namespaces are named after exact folder structure in accordance with working php file location, autoload function can be used.</p>
+    <div class="code">
+      <code
+        ><span style="color: #000000">
+          <span style="color: #0000bb">&lt;?php<br /></span><span style="color: #ff8000">//-----------Product/Product.php------------------<br /></span><span style="color: #007700">namespace </span><span style="color: #0000bb">Product</span><span style="color: #007700">;<br />class </span><span style="color: #0000bb">Product </span><span style="color: #007700">{<br />};<br /></span><span style="color: #ff8000">//-----------example.php------------------<br /></span><span style="color: #0000bb">spl_autoload_register</span><span style="color: #007700">(function(</span><span style="color: #0000bb">$class</span><span style="color: #007700">) {<br />require </span><span style="color: #0000bb">str_replace</span><span style="color: #007700">(</span><span style="color: #dd0000">'\\'</span><span style="color: #007700">, </span><span style="color: #dd0000">'/'</span><span style="color: #007700">, </span><span style="color: #0000bb">$class</span><span style="color: #007700">) . </span><span style="color: #dd0000">".php"</span><span style="color: #007700">;<br />});<br /><br /></span><span style="color: #ff8000">// require 'Product\Product.php';<br /><br /></span
+          ><span style="color: #0000bb">$product </span><span style="color: #007700">= new </span><span style="color: #0000bb">Product</span><span style="color: #007700">\</span><span style="color: #0000bb">Product</span><span style="color: #007700">;<br /></span><span style="color: #0000bb">var_dump</span><span style="color: #007700">(</span><span style="color: #0000bb">$product</span><span style="color: #007700">); </span><span style="color: #ff8000">//object(Product\Product)#2 (0) { } <br /></span>
+        </span>
+      </code>
+    </div>
+    (<a href="files/autoloaderNamespace.zip" download>project files</a> )
+    <div class="tips">
+      <ul>
+        <li><i>CamalCase</i> typing is preferable</li>
+        <li>
+          namespace is <b>case<i>insensitive</i> </b>
+        </li>
+        <li>You can declare more than one namespace in a single file, but it is not recomended practise</li>
+        <li>Keep classes in separate files</li>
+      </ul>
+    </div>
+  </body>
+</html>

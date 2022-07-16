@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>01-01</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    The only difference is — the include() statement will only generate a PHP warning but allow script execution to continue if the file to be included can't be found, whereas the require() statement will generate a fatal error and stops the script execution.
+    <p>If you accidentally include the same file (typically functions or classes files) more than one time within your code using the include or require statements, it may cause conflicts. To prevent this situation, PHP provides include_once and require_once statements. These statements behave in the same way as include and require statements with one exception. The include_once and require_once statements will only include the file once even if asked to include it a second time i.e. if the specified file has already been included in a previous statement, the file is not included again. To better understand how it works, let's check out an example. Suppose we've a 'my_functions.php' file with the following code:</p>
+
+    <code
+      ><span style="color: #000000">
+        <span style="color: #0000bb">&lt;?php<br /><br /><br />      </span><span style="color: #007700">require </span><span style="color: #dd0000">"my_functions.php"</span><span style="color: #007700">; </span><span style="color: #ff8000">// Including file<br />      </span><span style="color: #0000bb">multiplySelf</span><span style="color: #007700">(</span><span style="color: #0000bb">2</span><span style="color: #007700">); </span><span style="color: #ff8000">// Output: 4<br /><br />      </span><span style="color: #007700">require </span><span style="color: #dd0000">"my_functions.php"</span><span style="color: #007700">;       </span><span style="color: #ff8000">// Including file once again<br />      </span><span style="color: #0000bb">multiplySelf</span><span style="color: #007700">(</span><span style="color: #0000bb">5</span><span style="color: #007700">); </span
+        ><span style="color: #ff8000">// Doesn't execute<br /> <br />      </span><span style="color: #007700">require_once </span><span style="color: #dd0000">"my_functions.php"</span><span style="color: #007700">; </span><span style="color: #ff8000">// Including file<br />      </span><span style="color: #0000bb">multiplySelf</span><span style="color: #007700">(</span><span style="color: #0000bb">2</span><span style="color: #007700">); </span><span style="color: #ff8000">// Output: 4<br /><br />      </span><span style="color: #007700">require_once </span><span style="color: #dd0000">"my_functions.php"</span><span style="color: #007700">;  </span><span style="color: #ff8000">// Including file once again<br />      </span><span style="color: #0000bb">multiplySelf</span><span style="color: #007700">(</span><span style="color: #0000bb">5</span><span style="color: #007700">); </span><span style="color: #ff8000">// Output: 25<br /><br /></span
+        ><span style="color: #0000bb">?&gt;</span>
+      </span>
+    </code>
+  </body>
+</html>

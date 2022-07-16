@@ -171,6 +171,29 @@ button[class^="control"] {
   height: 36px;
 }
 
+.code {
+  border: white 3px dashed;
+  background-color: black;
+  border-radius: 18px;
+  padding: 15px;
+}
+
+.tips {
+  border: white 3px dashed;
+  background-color: rgb(85, 83, 83);
+  border-radius: 18px;
+  padding: 15px;
+}
+
+kbd {
+  color: #ddd;
+  background-color: #000000;
+  border-radius: 5px;
+  padding: 2px 9px;
+  /* margin: 0px; */
+  font-size: 0.8em;
+}
+
 @keyframes example {
   from {
     color: rgb(3, 3, 3);
